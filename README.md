@@ -18,4 +18,4 @@ Lectopia Final Project
 3. 프로젝트 목표
 - 가족들이 함께 사용할 수 있는 쉽고 간편한 기능을 제공함으로써 가족 구성원 모두가 함께 즐길 수 있는
   SNS 프로그램을 개발하고 이를 통해 가족 관계 개선에 도움을 준다.
-![image](https://user-images.githubusercontent.com/38840782/113532455-5aaa1c00-9606-11eb-972e-d4c3fc3a516c.png)
+
