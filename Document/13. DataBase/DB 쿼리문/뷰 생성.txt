@@ -1,0 +1,151 @@
+
+CREATE OR REPLACE VIEW connection_waiting_view
+AS
+SELECT w.waiting_code, w.sender_home_code , sfh.family_home_name , sfm.member_name, w.receiver_home_code
+from connection_waiting_tb w
+join family_home_tb sfh
+on w.sender_home_code = sfh.family_home_code
+join family_member_tb sfm
+on sfh.family_home_code = sfm.family_home_code and sfm.member_role = '1';
+
+CREATE OR REPLACE VIEW connected_neighbor_view
+AS
+SELECT cn.neighbor_code, cn.home1_code "first_home_code", fh1.family_home_name "first_home_name", fm1.member_nickname "first_manager_name", cn.home2_code "second_home_code", fh2.family_home_name "second_home_name", fm2.member_nickname "second_manager_name"
+FROM connected_neighbor_tb cn
+join family_home_tb fh1
+on cn.home1_code = fh1.family_home_code
+join family_member_tb fm1
+on fh1.family_home_code = fm1.family_home_code and fm1.member_role = '1'
+join family_home_tb fh2
+on cn.home2_code = fh2.family_home_code
+join family_member_tb fm2
+on fh2.family_home_code = fm2.family_home_code and fm2.member_role = '1';
+
+CREATE OR REPLACE VIEW schedule_view
+AS
+SELECT s.schedule_code, m.member_nickname schedule_member, schedule_title, schedule_place, schedule_start_date, schedule_end_date, schedule_alarm, schedule_repeat, schedule_memo, am.member_nickname alarm_member
+FROM schedule_tb s , family_member_tb m, alarm_family_tb a, family_member_tb am
+WHERE s.member_code = m.member_code AND a.schedule_code(+) = s.schedule_code AND a.member_code = am.member_code(+);
+
+CREATE OR REPLACE VIEW family_schedule_view
+AS
+SELECT f.family_schedule_code, f.family_schedule_title, f.family_schedule_place, f.family_schedule_start_date, f.family_schedule_end_date, f.family_schedule_alarm, f.family_schedule_repeat, f.family_schedule_memo, e.family_event_request, rm.member_name, er.family_response_contents
+FROM family_schedule_tb f 
+right join family_event_tb e
+on f.family_schedule_code = e.family_schedule_code
+left join family_event_response_tb er
+on e.family_event_code = er.family_event_code
+left join family_member_tb rm
+on er.member_code = rm.member_code;
+
+
+CREATE OR REPLACE VIEW home_info_view
+AS
+SELECT h.family_home_code, h.family_home_name, m.member_code, m.member_name, m.member_phone, m.member_email, m.member_photo, m.member_nickname, m.member_color, m.member_birth, m.member_role
+from family_home_tb h
+left join family_member_tb m
+on h.family_home_code = m.family_home_code;
+
+
+CREATE OR REPLACE VIEW diary_view
+AS
+SELECT d.diary_code, m.member_nickname, d.diary_title, d.diary_date,s.sotong_contents_code, s.contents, i.image_name, i.image_written_date, e.emoticon_name, e.emoticon_route
+from diary_tb d
+join family_member_tb m
+on d.member_code = m.member_code
+join sotong_contents_tb s
+on d.sotong_contents_code = s.sotong_contents_code
+left join image_tb i
+on s.image_code = i.image_code
+left join emoticon_tb e
+on s.emoticon_code = e.emoticon_code;
+
+
+CREATE OR REPLACE VIEW letter_view
+AS
+SELECT l.letter_code, sm.member_nickname "sender", rm.member_nickname "receiver", l.letter_title, l.send_date,s.sotong_contents_code, s.contents, i.image_name, i.image_written_date, e.emoticon_name, e.emoticon_route
+from letter_tb l
+join family_member_tb sm
+on l.sender_code = sm.member_code
+join family_member_tb rm
+on l.receiver_code = rm.member_code
+join sotong_contents_tb s
+on l.sotong_contents_code = s.sotong_contents_code
+join image_tb i
+on s.image_code = i.image_code
+join emoticon_tb e
+on s.emoticon_code = e.emoticon_code;
+
+
+CREATE OR REPLACE VIEW wish_view
+AS
+SELECT w.wish_code, m.member_nickname, m.family_home_code,s.sotong_contents_code,s.contents, e.emoticon_name, e.emoticon_route, i.image_name, 
+i.image_written_date, w.wish_title, w.wish_date, w.wish_end_date, w.wish_finish
+from wish_tb w
+join family_member_tb m
+on w.member_code = m.member_code
+join sotong_contents_tb s
+on w.sotong_contents_code = s.sotong_contents_code
+join emoticon_tb e
+on s.emoticon_code = e.emoticon_code
+join image_tb i
+on s.image_code = i.image_code;
+
+
+CREATE OR REPLACE VIEW story_view
+AS
+SELECT st.story_code, st.family_home_code, h.family_home_name, m.member_code, m.member_photo, m.member_color, m.member_nickname,sc.sotong_contents_code, sc.contents, i.image_name, i.image_written_date, e.emoticon_name, e.emoticon_route, st.story_date, st.story_heart, st.story_modify_date, st.story_scope
+from story_tb st
+join family_home_tb h
+on st.family_home_code = h.family_home_code
+join family_member_tb m
+on st.member_code = m.member_code
+join sotong_contents_tb sc
+on st.sotong_contents_code = sc.sotong_contents_code
+join image_tb i
+on sc.image_code = i.image_code
+join emoticon_tb e
+on sc.emoticon_code = e.emoticon_code
+order by story_modify_date desc;
+
+
+create or replace view menu_view
+as
+select m.menu_code, fh.family_home_code, share_date, fm.member_nickname, lunch,  dinner
+from lunch_tb l
+left join menu_tb m
+on l.menu_code = m.menu_code
+left join family_member_tb fm
+on l.member_code = fm.member_code
+right join family_home_tb fh
+on fm.family_home_code = fh.family_home_code
+order by fm.family_home_code;
+
+create or replace view comment_view
+as
+select c.comment_code, fm.member_nickname, fm.member_photo, fm.member_color, c.comment_contents, c.comment_date, 
+e.emoticon_name, c.family_diary_code,c.story_code, e.emoticon_route
+from comment_tb c
+left join emoticon_tb e
+on c.emoticon_code = e.emoticon_code
+join family_member_tb fm
+on c.member_code = fm.member_code
+left join family_diary_tb fd
+on c.family_diary_code = fd.family_diary_code;
+
+
+create or replace view family_diary_view
+as
+select fd.family_diary_code, fd.family_home_code, fd.family_diary_date , fdp.family_diary_part_code ,fm.member_nickname, fm.member_photo, fdp.family_diary_part_date,sc.sotong_contents_code, sc.contents, e.emoticon_name, e.emoticon_route, i.image_name, i.image_written_date
+from family_diary_tb fd
+left join family_diary_part_tb fdp
+on fd.family_diary_code = fdp.family_diary_code
+left join family_member_tb fm
+on fdp.member_code = fm.member_code
+left join sotong_contents_tb sc
+on fdp.sotong_contents_code = sc.sotong_contents_code
+left join emoticon_tb e
+on sc.emoticon_code = e.emoticon_code
+left join image_tb i
+on sc.image_code = i.image_code
+order by family_diary_code;

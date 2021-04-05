@@ -1,0 +1,238 @@
+* {
+	margin:0;
+	padding:0;
+}
+body{
+	width:1300px;
+	margin:0 auto;
+}
+
+.list-inline {
+	overflow: auto;
+	float: right;
+}
+
+.list-inline li {
+	float: left;
+	display: inline;
+	padding-right:5px;
+}
+
+.modify-contents-button {
+	float: right;
+}
+
+textarea {
+    resize: none;
+  /*  border:none	테두리 없애는 코드*/ 
+    
+}
+
+#write-btn {
+	float:right;
+}
+
+/* 작성 게시글 div틀 */
+.family-board {
+    width: 84%;
+    float: right;
+}
+
+.famil-board {
+	width: 88%;
+    padding: 10px;
+    float: right;
+    position: relative;
+    right: 100px;
+}
+
+.family-board-image {
+    width: 47px;
+    height: 47px;
+    margin-top: 10px;
+    margin-left: 30px;
+	
+}
+
+.profile-image {
+	width:100%;
+	height:100%;
+}
+
+.family-board-name {
+	width: 85%;
+    text-align: center;
+    border: none;
+    position: relative;
+    right: 10px;
+}
+
+.family-board-content {
+	padding: 10px;
+    border: 2px solid #00bfff;
+    width: 71%;
+    height: 250px;
+    border-radius: 15px;
+    float: right;
+    position: relative;
+    right: 130px;
+}
+
+/* textarea의 div 틀 이다 */
+.famil-board-text {
+	width: 98%;
+    height: 84%;
+}
+
+/* textarea 클래스 이다 */
+.form-control {
+	width:100%;
+	height:93%;
+   	padding-top: 15px;	
+}
+
+/* 버튼의 전체 틀 위치 배치 및 설정 */
+#write-board-button {
+	float: right;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+/* 공개 범위 위치 배치 설정 */
+#public-scope-letter {
+	float:left;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+/* 공개 범위 select 위치 배치 및 설정 */
+#public-scope, #modify-public-scope {
+	float: left;
+    height: 30px;
+    margin-top: 1px;
+    margin-left: 10px;
+}
+
+
+.family-board-down {
+	width: 99%;
+    height: 33px;
+    position: relative;
+    top: 13px;
+}
+
+#camera-btn {
+	width:22px;
+	height:22px;
+}
+
+.emoticon-button {
+	width:22px;
+	height:22px;
+	background:none;
+	border:none;
+	background-image:url("../../image/emoticon.png");
+	
+}
+
+
+/* 프로핑 테두리 위치 및 설정 */
+.profile-border {
+	width: 13%;
+    float: left;
+    height: 270px;
+}
+
+/* 댓글 프로필 사진 위치 배치 및 설정 */
+#comment-profile {
+    width: 30px;
+    height: 30px;
+    float: left;
+    margin: 0;
+}
+
+
+#comment-content-all {
+	float: right;
+	width: 95%;
+}
+
+/* 댓글 text 위치 배치 및 설정 */
+#comment-content {
+    width: 91%;
+    height: 15px;
+    margin-top: 3px;
+}
+
+/* 수정 삭제 버튼의 틀 위치 배치 및 설정 */
+.read-board-update-button {
+    width: 64px;
+    height: 30px;
+    float: right;
+    position: relative;
+    top: -54px;
+	right: 3px;    
+}
+
+.modify {
+	float:left;
+}
+
+#delete-btn {
+	float:right;
+}
+
+/* 작성 일자 위치 배치 및 설정 */
+.family-board-date {
+    font-size: 13px;
+    width: 130px;
+    float: right;
+    position: relative;
+    top: -242px;
+}
+
+#file-input {
+    display: none;
+}
+
+
+#comment-write {
+	/* visibility:hidden;	*/
+}
+
+.heart-button {
+	width:20px;
+	height:20px;
+	background:none;
+	border:none;
+	background-image:url("../../image/clickHeart.png");
+}
+
+#heart-image {
+	/* 하트 배치  */
+	position: relative;
+    float: right;
+   	left: 535px;
+    top: 15px;
+}
+
+#heartNo {
+	/* 하트 개수 배치  */
+	float:right;
+	margin-right:10px;
+}
+
+.li-story-list {
+	width:84%;
+	float:right;
+}
+
+.modify-family-board-down {
+	display:none;
+}
+
+
+#comment-profile img {
+    height: 100%;
+    width: 100%;
+}

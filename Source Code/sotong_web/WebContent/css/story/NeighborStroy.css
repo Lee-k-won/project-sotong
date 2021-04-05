@@ -1,0 +1,164 @@
+* {
+	margin:0;
+	padding:0;
+}
+body{
+	width:1300px;
+	margin:0 auto;
+}
+
+/* 작성 게시글 div틀 */
+.family-board {
+    width: 84%;
+    float: right;
+}
+
+.famil-board {
+	width: 88%;
+    padding: 10px;
+    float: right;
+    position: relative;
+    right: 100px;
+}
+
+/* textarea의 div 틀 이다 */
+.famil-board-text {
+	width: 98%;
+	height: 200px;
+}
+
+/* 프로핑 테두리 위치 및 설정 */
+.profile-border {
+	width: 13%;
+    float: left;
+    height: 270px;
+}
+
+/* textarea 클래스 이다 */
+.form-control {
+	width:100%;
+	height:100%;
+	resize: none;
+	margin-top: 8px;
+}
+
+/* 프로필 사진 위치 배치 및 설정 */
+.family-board-image {
+    width: 47px;
+    height: 47px;
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+.family-board-image image {
+	width:100%;
+	height:100%;
+}
+
+/* 프로필 이름 위치 배치 및 설정 */
+.family-board-name {
+	width: 85%;
+    text-align: center;
+    border: none;
+    position: relative;
+    right: 10px;
+}
+
+/*이웃 이야기 보드 위치 배치 및 설정 */
+.family-board-content {
+	padding: 10px;
+    border: 2px solid #00bfff;
+    width: 71%;
+    border-radius: 15px;
+    float: right;
+    position: relative;
+    right: 130px;
+}
+
+/* 이웃 홈 보다 가기 버튼 위치 배치 및 설정 */
+#family-board-top {
+    margin-top: -5px;	
+}
+
+/* 이웃 홈 이름 위치 배치 */
+#neighbor-story {
+    float: left;
+    font-weight:bold;
+    margin-right:5px;
+}
+
+/* 이웃 홈 버튼 위치 배치 */
+#negihbor-story-btn {
+    float: left;
+}
+
+.heart-button {
+	width:20px;
+	height:20px;
+	background:none;
+	border:none;
+	background-image:url("../../image/clickHeart.png");
+}
+
+.neighbor-story-home-button {
+	background:none;
+	border:none;
+	float: left;
+}
+
+/* 댓글 전체 */
+#comment-write {
+    margin-top: 45px;
+}
+
+/* 댓글 프로필 사진 위치 배치 및 설정 */
+#comment-profile {
+    width: 30px;
+    height: 30px;
+   	float: left;
+}
+
+#comment-profile image {
+	width:100%;
+	height:100%;
+}
+
+/* 댓글 텍스트 창이랑 댓글 버튼 위치 배치 및 설정 */
+#comment-content-all {
+	width: 95%;
+    float: right;
+}
+
+/* 댓글 text 위치 배치 및 설정 */
+#comment-content {
+    width: 91%;
+    margin: 0;
+}
+
+/* 작성 일자 위치 배치 및 설정 */
+.family-board-date {
+    position: relative;
+    top: -262px;
+    left: 610px;
+    width: 11%;
+}
+#heart-image {
+	/* 하트 배치  */
+	float: right;
+    margin-right: 15px;
+}
+
+#heartNo {
+	/* 하트 개수 배치  */
+    float: right;
+}
+
+#comment-profile img {
+    width: 100%;
+    height: 100%;
+}
+
+#read-profile-photo img {
+    height: 100%;
+    width: 100%;
+}

@@ -1,0 +1,141 @@
+	form-control custom-control {
+		resize : none;
+	}
+	
+	#letterForm{
+		width:80%;
+		height:800px;
+		padding:10px;
+		margin: 30px auto;
+		background-color: rgba(255, 153, 150, 0.47);
+		border : 1px solid #FF9996;
+		border-radius : 30px;
+		resize : none;
+	}
+	
+	#letterContent, #letterDate, #letterReceiver {
+		border : 1px solid black;
+		border-radius : 10px;
+		resize : none;
+	}
+	
+	#letterTitle{
+		border : 1px solid black;
+		border-radius : 10px;
+		resize : none;
+		height:40px;
+		font-size:20px;
+	}
+	
+	#letterReceiver {
+		float : right;
+	}
+	
+	#letterDate {
+		float : right;
+	}
+	
+	#receiver {
+		color : #99ccff;
+	}
+	buttons {
+		width : 47px;
+		height : 47px;
+	}
+	
+	#file-input {
+		display:none;
+	}
+	
+	#checkBtn {
+		background : url("../../img/letter/check.png") no-repeat;
+		background-size : cover;
+		border:none;
+	}
+	
+	#backBtn {
+		background : url("../../img/letter/back.png") no-repeat;
+		background-size : cover;
+		border:none;
+	}
+	
+	#file-input {
+		width : 47px;
+		height : 47px;
+	}
+	
+	.input-group {
+		background : white;
+		border-radius : 10px;
+	}
+	
+	#letter-writer-title{
+		margin:50px auto 20px auto;
+		width:80%;
+	}
+	
+	#letter-writer-receiverForm{
+		width:80%;
+		height:50px;
+		margin:0 auto;
+	}
+	
+	#letter-writer-receiverDiv{
+		float:right;
+		margin-right:30px;
+		height:50px;
+	}
+	
+	#letter-writer-receiver{
+		float:left;
+		margin-right:20px;
+	}
+	
+	#letter-writer-list{
+		float:left;
+		height:50px;
+	}
+	
+	#receiverList{
+		height:30px;
+	}
+	
+	#letter-writer-contentsDiv{
+		display:block;
+		margin:0 auto 30px auto;
+		width:80%;
+		height:500px;
+		resize:none;
+	}
+	
+	#letter-write-sendInfo{
+		display:table;
+		margin:10px auto;
+		width:80%;
+		height:50px;
+		line-height:50px;
+	}
+	
+	#letter-write-sendInfo label{
+		display:inline-table;
+		margin:20px;
+	}
+	
+	#letter-write-sendDate{
+		float:left;
+		line-height: 50px;
+	}
+	
+	#letter-write-buttons{
+		float:right;
+		margin-right:20px;
+	}
+	
+	.buttons{
+		margin-left:30px;
+		width:50px;
+		height:50px;
+	}
+	
+	
+	

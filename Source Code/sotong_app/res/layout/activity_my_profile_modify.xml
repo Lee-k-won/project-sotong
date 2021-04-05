@@ -1,0 +1,534 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_gradation"
+    android:orientation="vertical"
+    android:paddingTop="2dp" >
+   
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+         android:layout_weight="1"
+         android:orientation="horizontal" >
+      
+        <TextView
+            android:layout_margin="1dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="#00B0F0"
+            android:textColor="#FFFFFF"
+            android:layout_weight="3"
+            android:text="프로필 수정" 
+            />
+
+        <Button
+            android:id="@+id/myProfileModifyModifyBtn"
+            android:layout_margin="1dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#00B0F0"
+            android:textColor="#FFFFFF"
+            android:layout_weight="1"
+            android:text="수정" />
+         <Button
+            android:id="@+id/myProfileModifyCancelBtn"
+            android:layout_margin="1dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#00B0F0"
+            android:textColor="#FFFFFF"
+            android:layout_weight="1"
+            android:text="돌아가기" />
+
+        
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/myProfileRole"
+            android:layout_width="20dp"
+            android:layout_height="20dp" 
+            android:src="@drawable/manager"/>
+       <LinearLayout
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:gravity="center" >
+           <ImageView
+               android:id="@+id/myProfileImage"
+               android:layout_width="60dp"
+               android:layout_height="60dp" 
+               android:layout_gravity="center"
+               android:adjustViewBounds="true"
+               android:src="@drawable/ic_launcher" />
+           <TextView
+               android:id="@+id/myProfileName"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               
+               />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="5sp"
+        android:layout_marginRight="5sp"
+        android:layout_marginTop="2sp"
+        android:layout_marginBottom="2sp"
+        
+        android:background="@drawable/layout_border"
+        android:orientation="horizontal" >
+
+      <LinearLayout
+          android:layout_width="0dp"
+          android:layout_weight="2"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:gravity="center_vertical"
+           >
+
+         <ImageView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center"
+             android:paddingTop="5dp"
+             android:src="@drawable/id" />
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginBottom="3dp"
+             android:layout_marginLeft="3dp"
+             android:layout_marginRight="3dp"
+			 android:paddingTop="5dp"
+             android:text="아이디"
+             android:textSize="10sp" 
+             android:layout_gravity="center"
+             />
+
+      </LinearLayout>
+
+        <EditText
+            android:id="@+id/myProfileId"
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:paddingLeft="5dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/edit_text_border"
+            android:clickable="false"
+            android:editable="false"
+            android:paddingBottom="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:textSize="15sp" />
+       
+    </LinearLayout>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="0dp"
+       android:layout_weight="1"
+       android:layout_marginLeft="5sp"
+        android:layout_marginRight="5sp"
+        android:layout_marginTop="2sp"
+        android:layout_marginBottom="2sp"
+       android:background="@drawable/layout_border"
+       android:orientation="horizontal"
+       >
+      <LinearLayout
+          android:layout_width="0dp"
+          android:layout_weight="2"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:gravity="center_vertical"
+           >
+
+         <ImageView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center"
+             android:paddingTop="5dp"
+             android:src="@drawable/phonenum" />
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_marginBottom="3dp"
+             android:layout_marginLeft="3dp"
+             android:layout_marginRight="3dp"
+	         android:paddingTop="5dp"
+	         android:layout_gravity="center"
+             android:text="휴대폰 번호"
+             android:textSize="8sp" />
+
+      </LinearLayout>
+        <EditText
+            android:id="@+id/myProfilePhoneNum"
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:paddingLeft="5dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/edit_text_border"
+            android:paddingBottom="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:textSize="15sp" />
+       
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="5sp"
+        android:layout_marginRight="5sp"
+        android:layout_marginTop="2sp"
+        android:layout_marginBottom="2sp"
+        android:background="@drawable/layout_border"
+        android:orientation="horizontal"
+         >
+      <LinearLayout
+          android:layout_width="0dp"
+          android:layout_weight="2"
+          android:layout_height="wrap_content"
+          android:paddingLeft="3dp"
+          android:orientation="vertical"
+          android:gravity="center_vertical"
+           >
+
+         <ImageView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center"
+             android:paddingTop="5dp"
+             android:src="@drawable/email" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+	        android:paddingTop="5dp"
+            android:layout_gravity="center"
+            android:text="이메일"
+            android:textSize="8sp" />
+
+         </LinearLayout>
+         <EditText
+            android:id="@+id/myProfileEmail"
+            android:layout_width="0dp"
+          	android:layout_weight="5"
+          	android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:paddingLeft="5dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/edit_text_border"
+            android:textSize="15sp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingRight="5dp"
+            />
+            
+       
+    </LinearLayout>
+
+   <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="5sp"
+        android:layout_marginRight="5sp"
+        android:layout_marginTop="2sp"
+        android:layout_marginBottom="2sp"
+        android:background="@drawable/layout_border"
+        android:orientation="horizontal">
+      <LinearLayout
+          android:layout_width="0dp"
+          android:layout_weight="2"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:gravity="center_vertical"
+           >
+
+         <ImageView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center"
+             android:paddingTop="5dp"
+             android:src="@drawable/pw" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+	        android:paddingTop="5dp"
+            android:layout_gravity="center"
+            android:text="비밀번호"
+            android:textSize="8sp" />
+
+         </LinearLayout>
+        <EditText
+            android:id="@+id/myProfilePassword"
+            android:layout_width="0dp"
+          	android:layout_weight="5"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:paddingLeft="5dp"
+            android:background="@drawable/edit_text_border"
+            android:paddingBottom="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:textSize="15sp"
+            android:password="true"
+            />
+       
+    </LinearLayout>
+   <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="5sp"
+        android:layout_marginRight="5sp"
+        android:layout_marginTop="2sp"
+        android:layout_marginBottom="2sp"
+        android:background="@drawable/layout_border"
+        android:orientation="horizontal" >
+      <LinearLayout
+          android:layout_width="0dp"
+          android:layout_weight="2"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:gravity="center_vertical"
+           >
+
+         <ImageView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center"
+             android:paddingTop="5dp"
+             android:src="@drawable/pwcheck" />
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginBottom="3dp"
+          android:layout_marginLeft="3dp"
+          android:layout_marginRight="3dp"
+	      android:paddingTop="5dp"
+          android:layout_gravity="center"
+          android:text="비밀번호확인"
+          android:textSize="8sp" />
+
+      </LinearLayout>
+        <EditText
+            android:id="@+id/myProfilePasswordCheck"
+            android:layout_width="0dp"
+          	android:layout_weight="5"
+          	android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:paddingLeft="5dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/edit_text_border"
+            android:textSize="15sp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingRight="5dp"
+            android:password="true"
+            />
+            
+       
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="5sp"
+        android:layout_marginRight="5sp"
+        android:layout_marginTop="2sp"
+        android:layout_marginBottom="2sp"
+        android:background="@drawable/layout_border"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" 
+            android:gravity="center_vertical"
+            >
+
+         <ImageView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center"
+             android:paddingTop="5dp"
+             android:src="@drawable/birthday" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+	     	android:paddingTop="5dp"
+            android:layout_gravity="center"
+            android:text="생년월일"
+            android:textSize="8sp" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/myProfileBirthday"
+            android:layout_width="0dp"
+          	android:layout_weight="5"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:paddingLeft="5dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/edit_text_border"
+            android:paddingBottom="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:textSize="15sp" />
+            
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="5sp"
+        android:layout_marginRight="5sp"
+        android:layout_marginTop="2sp"
+        android:layout_marginBottom="2sp"
+        android:background="@drawable/layout_border"
+        android:orientation="horizontal">
+        
+        <LinearLayout
+          android:layout_width="0dp"
+          android:layout_weight="2"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:paddingLeft="3dp"
+          android:gravity="center_vertical"
+           >
+
+         <ImageView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center"
+             android:paddingTop="5dp"
+             android:src="@drawable/nick" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+	    	android:paddingTop="5dp"
+            android:layout_gravity="center"
+            android:text="별명"
+            android:textSize="8sp" />
+
+        </LinearLayout>
+        <EditText
+            android:id="@+id/myProfileNickname"
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:paddingLeft="5dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/edit_text_border"
+            android:textSize="15sp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingRight="5dp"
+            />
+            
+       
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="5sp"
+        android:layout_marginRight="5sp"
+        android:layout_marginTop="2sp"
+        android:layout_marginBottom="2sp"
+        android:background="@drawable/layout_border"
+        android:orientation="horizontal">
+        
+        <LinearLayout
+          android:layout_width="0dp"
+          android:layout_weight="2"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_horizontal"
+          android:orientation="vertical"
+          android:gravity="center_vertical"
+           >
+
+         <ImageView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center"
+             android:paddingTop="5dp"
+             android:src="@drawable/color" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+	    	android:paddingTop="5dp"
+            android:layout_gravity="center"
+            android:text="색상"
+            android:textSize="8sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/myProfileColor"
+            android:layout_width="0dp"
+         	android:layout_weight="5"
+            android:layout_height="20dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginLeft="3dp"
+            android:paddingLeft="5dp"
+            android:background="#D796D7"
+            android:layout_gravity="center_vertical"
+             />
+          
+    </LinearLayout>
+</LinearLayout>

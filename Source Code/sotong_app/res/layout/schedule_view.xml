@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_gradation"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffffff" >
+
+        <Button
+            android:id="@+id/monthPrevious"
+            android:layout_width="46dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/backward"
+            android:gravity="center_horizontal" />
+        
+
+        <TextView
+            android:id="@+id/monthText"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            android:text="MonthView"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/monthNext"
+            android:layout_width="46dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/forward"
+            android:gravity="center_horizontal" />
+    </RelativeLayout>
+
+    <!-- 실제 네모칸 -->
+    <com.example.finalproject.calendar.CalendarView
+        android:id="@+id/monthView"
+        android:layout_width="match_parent"
+        android:layout_height="255dp"
+        android:layout_weight="0.58" />
+
+    <!-- 날짜 클릭 시 나오는 List -->
+    <ListView
+        android:id="@+id/ScheduleListView"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_weight="0.70" >
+         
+       
+    </ListView>
+
+</LinearLayout>

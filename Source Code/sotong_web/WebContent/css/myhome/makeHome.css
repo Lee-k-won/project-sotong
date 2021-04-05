@@ -1,0 +1,67 @@
+* {
+	margin:0;
+	padding:0;
+}
+
+#make-home-body {
+    background: url('../../img/house.JPG');
+    background-size: cover;
+    opacity: 0.6;
+    width: 1200px;
+    height: 750px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+#home-text {
+    border: none;
+    background: none;
+    font-size: 40px;
+    font-weight: bold;
+    width: 550px;
+    height: 100px;
+    resize: none;
+    text-align: center;
+    position: relative;
+    top: -700px;
+    color: #FFD5CD;
+}
+
+.btn {
+	/*
+	  background: #3498db;
+	 
+	  
+	  border-radius: 28px;
+	  font-family: Arial;
+	  color: #ffffff;
+	  font-size: 20px;
+	  padding: 10px 20px 10px 20px;
+	  text-decoration: none;
+	  position: relative;
+	  height: 130px;
+	  width: 100px;
+	  top: -415px;
+	  */
+    border-radius: 75px;
+    font-family: Arial;
+    color: black;
+    font-weight: bolder;
+    font-size: 70px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    position: relative;
+    height: 149px;
+    width: 300px;
+    top: -431px;
+       background-image: linear-gradient(to bottom, #828A96, #7F94A6);
+}
+
+.btn:hover {
+  text-decoration: none;
+  background:none;
+}
+
+#make-home-body input {
+	
+}

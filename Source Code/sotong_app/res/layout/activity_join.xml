@@ -1,0 +1,220 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/login_gradation"
+    tools:context="com.example.finalproject.JoinActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+        <TextView
+            android:id="@+id/joinText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="회원가입하기"
+            android:textSize="25dp"
+            android:textColor="#000000"
+            android:gravity="center"
+            
+            />
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="아이디 (16 자리 이하)"
+            android:textSize="12dp"
+            android:textColor="#000000"
+            />
+        <EditText
+            android:id="@+id/joinIdText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:hint="아이디를 입력해주세요"
+            android:background="@drawable/edit_text_border"
+            />
+        
+        
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="비밀번호 (6 ~ 10 자리 이하)"
+            android:textSize="12dp"
+            android:textColor="#000000"
+            />
+        <EditText
+            android:id="@+id/joinPasswordText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:hint="비밀번호를 입력해주세요"
+            android:background="@drawable/edit_text_border"
+            />
+        
+        
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="비밀번호확인"
+            android:textSize="12dp"
+            android:textColor="#000000"
+            />
+        <EditText
+            android:id="@+id/joinPasswordCheckText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:hint="비밀번호를 다시 입력해주세요"
+            android:background="@drawable/edit_text_border"
+            />
+        
+        
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="이름 (5자리 이하)"
+            android:textSize="12dp"
+            android:textColor="#000000"
+            />
+        <EditText
+            android:id="@+id/joinNameText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:hint="이름을 입력해주세요"
+            android:background="@drawable/edit_text_border"
+            />
+        
+        
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="이메일주소 (30자리 이하)"
+            android:textSize="12dp"
+            android:textColor="#000000"
+            />
+        <EditText
+            android:id="@+id/joinEmailText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:hint="이메일주소를 입력해주세요"
+            android:background="@drawable/edit_text_border"
+            />
+        
+        
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="휴대폰번호"
+            android:textSize="12dp"
+            android:textColor="#000000"
+            />
+        <EditText
+            android:id="@+id/joinPhoneText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:hint="휴대폰번호를 입력해주세요"
+            android:background="@drawable/edit_text_border"
+            />
+        
+        
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        >
+        <Button
+            android:id="@+id/joinjoinBtn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="1dp"
+            android:background="#00B0F0"
+            android:text="회원가입"
+            android:textSize="20dp"
+            android:textColor="#ffffff"
+            />
+        <Button
+            android:id="@+id/joinCancelBtn"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:background="#00B0F0"
+            android:text="취소"
+            android:textSize="20dp"
+            android:textColor="#ffffff"
+            />
+        
+    </LinearLayout>
+    	
+    
+    
+</LinearLayout>

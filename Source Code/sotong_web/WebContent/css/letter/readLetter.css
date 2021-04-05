@@ -1,0 +1,159 @@
+	form-control custom-control {
+		resize : none;
+	}
+	
+	#letterForm{
+		height:650px;
+	}
+	
+	#letterContent, #letterDate, #letterTitle, #letterReceiver {
+		border : 1px solid white;
+		border-radius : 10px;
+		resize : none;
+	}
+	
+	#letterTitle{
+		height:50px;
+	}
+	
+	#letterReceiver {
+		float : right;
+	}
+	
+	
+	
+	.buttons {
+		width : 50px;
+		height : 50px;
+		border : none;
+	}
+	
+	input[readonly] {
+    	background-color: #ffffff ! important;
+	}
+	
+	textarea[readonly] {
+		background-color: #ffffff ! important;
+	}
+	
+	input[text] {
+		height : 100px;
+	}
+	
+    #letterWriter {
+    	color : black;
+    	font-size : 30px;
+    	float : right;
+    }
+    
+    #letterWriter{
+    	color : white;
+    	font-size : 50px;
+    }
+    
+    #writer{
+    	width:50%;
+    	height:50px;
+    	float:right;  
+    }
+    
+    #from{
+    	float:left;
+    	height:50px;
+    	font-size:50px;
+    	margin-right:20px;
+    	
+    }
+    
+    #profileImg {
+		width : 50px;
+		height : 50px;
+		border : 1px solid red;
+		float:left;
+		margin-right:20px;
+	}
+    
+    #sender{
+    	float:left;
+    	height:50px;
+    	font-size:40px;
+    }
+    
+    #letterTitle {
+    	font-size : 20px;
+    	color : black;
+    	font-weight : bold;
+    }
+    
+    #letterContent {
+    	font-size : 15px;
+    	color : black;
+    	height : 400px;
+    }
+    
+    #letter {
+    	width : 70%;
+    	height:700px;
+    	background-color : #66CCFF;
+    	border-radius : 25px;
+    	margin : 50px auto;
+    	padding : 20px;
+    	color : black;
+    	font-size:50px;    	
+    }
+   
+    #letterTimeDiv {
+    	float:center;
+    	width : 90%;
+    	padding : 10px;
+    	margin : 10px auto;;
+    	font-size : 30px;
+    }
+    
+    #letterTitleDiv, #letterContentDiv, #letterWriter {
+    	width : 90%;	
+    	margin : 10px auto;
+    	padding : 10px;
+    }
+
+    
+    #sendTime {
+    	color : black;
+    	font-size : 30px;
+    	font-weight : bold;
+    	
+    }
+    
+    #letterDate {
+    	float:right;
+    	font-size : 20px;
+    	font-weight : bold;
+    	width:30%;
+    	height:50px;
+    }
+    
+    #letter-read-buttons{
+    	float:right;
+    	margin-right:20px;
+    }
+    
+    #deleteBtn {
+		background:url("../../img/letter/delete.png") no-repeat;
+		background-size : cover;
+		border:none;
+		width:50px;
+		height:50px;
+		float:left;
+		margin-right:10px;
+	}
+	
+	#writeBtn {
+		background:url("../../img/letter/write.png") no-repeat;
+		background-size : cover;
+		border:none;
+		width:50px;
+		height:50px;
+		float:left;
+	}
+    
+}

@@ -1,0 +1,5 @@
+http://www.tutorialspoint.com/servlets/servlets-sending-email.htm
+
+psmt  ¶û servlet email Ã£¾Æº¸»ï 
+
+À§ ¸µÅ© º¸°í ¤µ¤¡

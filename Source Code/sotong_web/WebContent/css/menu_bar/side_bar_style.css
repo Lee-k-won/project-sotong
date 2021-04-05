@@ -1,0 +1,478 @@
+/*
+Template Name: DASHGUM FREE - Bootstrap 3.2 Admin Theme
+Template Version: 1.0
+Author: Carlos Alvarez
+Website: http://blacktie.co
+Premium: http://www.gridgum.com
+*/
+
+/* Import fonts */
+@import url(http://fonts.googleapis.com/css?family=Ruda:400,700,900);
+
+/* BASIC THEME CONFIGURATION */
+ul li {
+    list-style: none;
+}
+
+    text-decoration: none;
+    outline: none;
+}
+::selection {
+    background: #68dff0;
+    color: #fff;
+}
+::-moz-selection {
+    background: #68dff0;
+    color: #fff;
+}
+
+#container {
+    width: 100%;
+    height: 100%;
+}
+
+/* Bootstrap Modifications */
+.modal-header {
+}
+
+.modal-title {
+	color: white;
+}
+
+.btn-round {
+	border-radius: 20px;
+	-webkit-border-radius: 20px;
+}
+
+.accordion-heading .accordion-toggle {
+	display: block;
+	cursor: pointer;
+	border-top: 1px solid #F5F5F5;
+	padding: 5px 0px;
+	line-height: 28.75px;
+	text-transform: uppercase;
+	color: #1a1a1a;
+	background-color: #ffffff;
+	outline: none !important;
+	text-decoration: none;
+}	
+
+
+/*Exclusive Theme Colors Configuration*/
+
+.label-theme {
+	background-color: #68dff0;
+}
+
+.bg-theme {
+	background-color: #68dff0;
+}
+
+ul.top-menu > li > .logout {
+	color: #f2f2f2;
+	font-size: 12px;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border: 1px solid #64c3c2 !important;
+	padding: 5px 15px;
+	margin-right: 15px;
+	background: #68dff0;
+	margin-top: 15px;
+	*zoom:1;
+}
+
+
+/*sidebar navigation*/
+
+#sidebar {
+    width: 15%;
+    min-width : 180px;
+    height: 100%;
+    position: fixed;
+    background: #D4F4FA;	/* 사이드바 바탕색! */
+    display:none;
+    z-index: 999;
+    *zoom:1;
+    box-shadow: 0 1px 2px 0 #777;
+    overflow-y: auto;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#sidebar h5 {
+	color: #f2f2f2;
+	font-weight: 700;
+}
+
+#sidebar ul li {
+    position: relative;
+}
+
+#sidebar .sub-menu > .sub li  {
+    padding-left: 32px;
+}
+
+#sidebar .sub-menu > .sub li:last-child {
+    padding-bottom: 10px;
+}
+
+
+
+.nav-collapse.collapse {
+	  width: 81%;
+    display: inline;
+}
+
+ul.sidebar-menu , ul.sidebar-menu li ul.sub{
+    margin: -2px 0 0;
+    padding: 0;
+}
+
+ul.sidebar-menu {
+    margin-top: 75px;
+}
+
+#sidebar > ul > li > ul.sub {
+    display: none;
+}
+
+#sidebar > ul > li.active > ul.sub, #sidebar > ul > li > ul.sub > li > a {
+    display: block;
+}
+
+ul.sidebar-menu li ul.sub li{
+    background: #424a5d;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+ul.sidebar-menu li ul.sub li:last-child{
+    border-radius: 0 0 4px 4px;
+    -webkit-border-radius: 0 0 4px 4px;
+}
+
+ul.sidebar-menu li ul.sub li a {
+    font-size: 30px;
+    padding: 6px 0;
+    line-height: 35px;
+    height: 35px;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    color: #aeb2b7;
+}
+
+ul.sidebar-menu li ul.sub li a:hover {
+	color: white;
+	background: transparent;
+}
+
+ul.sidebar-menu li ul.sub li.active a {
+    color: #68dff0;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+ul.sidebar-menu li{
+    line-height: 20px !important;	/* 사이드바 한 칸의 길이. */
+    margin-bottom: 5px;
+    margin-left:10px;
+    margin-right:10px;
+}
+
+ul.sidebar-menu li.sub-menu{
+    line-height: 15px;
+}
+
+ul.sidebar-menu li a span{
+    display: inline-block;
+
+}
+
+ul.sidebar-menu li a{		/* 사이드 바 한 칸 한칸과 관련된 부분.*/
+    color: #00bfff;			/* 사이드 바 메뉴 글씨 색 */
+    text-decoration: none;
+    display: block;
+    padding: 15px 0 15px 10px;
+    font-size: 20px;
+    margin-bottom:40px;
+    outline: none;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+ul.sidebar-menu li a.active, ul.sidebar-menu li a:hover, ul.sidebar-menu li a:focus {
+    background: #68dff0;	/* 사이드 바 배경색 */
+    color: #fff;
+    display: block;
+
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+
+ul.sidebar-menu li a i {
+    font-size: 15px;
+    padding-right: 6px;
+}
+
+ul.sidebar-menu li a:hover i, ul.sidebar-menu li a:focus i {
+    color: #fff;
+}
+
+ul.sidebar-menu li a.active i {
+    color: #fff;
+}
+
+
+
+
+
+/* 필요한지 아닌지 확실히 모르는 부분 */
+
+
+
+
+
+/*Theme Backgrounds*/
+
+.bg-theme {
+	background-color: #68dff0;
+}
+
+.bg-theme02 {
+	background-color: #ac92ec;
+}
+
+.bg-theme03 {
+  background-color: #48cfad;
+}
+
+.bg-theme04 {
+  background-color: #ed5565;
+}
+/*Theme Buttons*/
+
+.btn-theme {
+  color: #fff;
+  background-color: #68dff0;
+  border-color: #48bcb4;
+}
+.btn-theme:hover,
+.btn-theme:focus,
+.btn-theme:active,
+.btn-theme.active,
+.open .dropdown-toggle.btn-theme {
+  color: #fff;
+  background-color: #48bcb4;
+  border-color: #48bcb4;
+}
+
+.btn-theme02 {
+  color: #fff;
+  background-color: #ac92ec;
+  border-color: #967adc;
+}
+.btn-theme02:hover,
+.btn-theme02:focus,
+.btn-theme02:active,
+.btn-theme02.active,
+.open .dropdown-toggle.btn-theme02 {
+  color: #fff;
+  background-color: #967adc;
+  border-color: #967adc;
+}
+
+.btn-theme03 {
+  color: #fff;
+  background-color: #48cfad;
+  border-color: #37bc9b;
+}
+.btn-theme03:hover,
+.btn-theme03:focus,
+.btn-theme03:active,
+.btn-theme03.active,
+.open .dropdown-toggle.btn-theme03 {
+  color: #fff;
+  background-color: #37bc9b;
+  border-color: #37bc9b;
+}
+
+.btn-theme04 {
+  color: #fff;
+  background-color: #ed5565;
+  border-color: #da4453;
+}
+.btn-theme04:hover,
+.btn-theme04:focus,
+.btn-theme04:active,
+.btn-theme04.active,
+.open .dropdown-toggle.btn-theme04 {
+  color: #fff;
+  background-color: #da4453;
+  border-color: #da4453;
+}
+
+.btn-clear-g {
+	color: #48bcb4;
+	background: transparent;
+	border-color: #48bcb4;
+}
+
+.btn-clear-g:hover {
+	color: white;
+}
+
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #797979;
+}
+
+
+#mainProfileImg{
+	background-size:cover;
+	width:150px;
+	height:150px;
+	margin: 20px auto;
+}
+
+#mainProfileImg image {
+	width:100%;
+	height:100%;
+}
+#showSidebar{
+	width:200px;
+	height:100px;
+	margin:20px auto 5px autos;
+}
+
+#alarm-border {
+	float:right;
+	position:relative;
+	top:-150px;
+}
+
+.alarm-item {
+	float:left;
+	margin-left:25px;
+}
+
+#alarm-button {
+	border:none;
+	background:none;
+}
+
+#alarm-profile-photo {
+    width: 45px;
+    height: 45px;
+}
+
+#alarm-image {
+	width: 50px;
+    height: 45px;
+    background-size:cover;
+    border:none;
+}
+
+#login-name {
+	border: none;
+    font-size: 26px;
+    font-weight: bold;
+    height: 35px;
+    width: 120px;
+    text-align:center;
+} 
+
+#alarmNum {
+	display:none;
+    border: none;
+    border-radius: 50%;
+    background-color: rgb(255, 115, 115);
+    font-size: 20px;
+    font-weight: bold;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    margin-left: -25px;
+    top: -15px;
+}
+
+#logout-button-menu {
+	width:45px;
+	height:45px;
+	background:none;
+	border:none;
+	background:url("../../img/logout.png") no-repeat;
+	background-size: cover;
+	margin-left:20px;
+}
+
+
+
+#jewelBox{
+	width:400px;
+	padding:10px;
+	text-align:center;
+	display:none;
+	
+}
+
+#jewelBox li{
+	display:inline-table;
+	width:300px;
+}
+
+#jewel-title{
+	margin:0 auto;
+}
+
+.jewelLabel{
+	width:70px;
+	height:60px;
+	font-size:20px;
+	float:left;
+}
+
+.jewel-btn{
+	width:100px;
+	height:60px;
+	display:table-cell;
+	vertical-align:middle;
+	font-size:25px;
+	float:right;
+}
+
+.connection-btn-group{
+	backgound-color:Green;
+	color:White;
+	float:left;
+}
+
+
+.reject-btn-group{
+	background-color:Red;
+	color:white;
+	float:right;
+}
+
+
+	

@@ -1,0 +1,191 @@
+body {
+	width : 1300px;
+}
+
+
+/* 편지 읽기 테두리 위치 배치 및 설정 */
+#letter-head-list-border {
+    width: 10%;
+    height: 50px;
+    position: relative;
+    top: 50px;
+    left: 110px;
+}
+
+/* 편지 일기 설정 */
+#letter-head-list {
+	color:#ffffff;
+	font-size:25px;
+	text-align:center;
+	background: #CEDFFD;
+	border:none;
+	width: 100%;
+    height: 100%;
+    border-radius: 25px;
+}
+
+.letter-border {
+	padding: 10px;
+}
+
+/* 제일 위 상단의 편지 border 설정 */
+#letter-title-sample, #letter-writer-sample, #letter-date-sample {
+	font-weight:bold;
+}
+
+/* 편지 간략 정보의 체크 버튼 테두리 위치배치 및 설정 */
+.check {
+    float: left;
+    widht: 47px;
+    height: 47px;
+    width: 47px;
+    margin-top: 10px;
+}
+
+/* 편지 간략 정보의 체크 버튼 설정 */
+.checkbox-danger {
+	width:100%;
+	height:100%;
+	border-radius:10px;
+}
+
+/* 편지 간략 정보의 제목 테두리의 위치 배치 및 설정 */
+.title {
+    float: left;
+    width: 65%;
+    height: 45px;
+    margin-top: 16px;
+    margin-left: 20px;
+    background-color: #ffffff;
+    border-radius: 7px;
+}
+
+/* 편지 간략 정보의 제목 설정 */
+.letterTitle {
+    widht: 100%;
+    width: 100%;
+    height: 100%;
+    font-size: 25px;
+    padding-top: 10px;
+}
+
+
+/* 편지 간략 정보의 작성자 테두리 위치 배치 및 설정 */
+.writer {
+    float: left;
+     width: 10%;
+    height: 45px;
+    margin-top: 16px;
+    margin-left: 20px;
+    background-color: #fff;
+    border-radius: 7px;	
+}
+
+/* 편지 간략 정보의 작성자 설정 */
+.letterWriter {
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+/* 편지 간략 정보의 작성 날짜 테두리 위치 배치 및 설정 */
+.date {
+  	float: left;
+    width: 13%;
+    height: 45px;
+    margin-top: 16px;
+    margin-left: 20px;
+	background-color: #fff;
+    border-radius: 7px;
+}
+
+/* 편지 간략 정보의 작성 날짜 설정 */
+.letterDate {
+	font-size: 20px;
+    padding-top: 10px;
+    
+}
+
+body ol li {
+	list-style : none;
+}
+
+#check, #writer, #date, #title {
+	
+
+}
+
+.letterInfo {
+	
+}
+
+.letterInfo a{
+	color : Black;
+}
+
+.letterInfo a:hover{
+	color : #00bfff;
+}
+
+#letterHead {
+	
+}
+
+#button {
+	
+}
+
+
+#letterView {
+	width: 80%;
+    height: 675px;
+    border-radius: 15px;
+    background: #CEDFFD;
+    float: right;
+    margin-right: 40px;
+   	overflow: auto;
+    overflow-x: hidden;
+}
+
+#button-side {
+	width : 18%;
+    float: right;
+    position: relative;
+    top: -25px;
+    right: 20px;
+}
+
+#letters {
+	float : left;
+	width : 98%;
+}
+
+#backBtn {
+	background : url("../../img/letter/back.png");
+	background-size : cover;
+	border : none;
+}
+
+#deleteBtn {
+	background : url("../../img/letter/delete.png");
+	background-size : cover;
+	border : none;
+}
+
+#writeBtn {
+	background : url("../../img/letter/write.png");
+	background-size : cover;
+	border : none;
+}
+
+.buttons {
+	width : 50px;
+	height : 50px;
+}
+
+
+a:hover {
+	color:black !important ;
+}
+	
+	
+	

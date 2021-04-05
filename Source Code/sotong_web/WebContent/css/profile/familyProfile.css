@@ -1,0 +1,157 @@
+* {
+	margin:0;
+	padding:0;
+}
+
+#profilePage {
+	width : 1300px;
+	height : 650px;
+	margin : 0 auto;
+}
+
+#back {
+	float : left;
+	width : 12%;
+	height:80%;
+	margin-top:120px;
+}
+
+#buttons {
+	float : left;
+	width : 20%;
+	height : 80%;
+	margin-top:220px;
+	text-align:left;
+}
+
+#profile {
+	float : left;
+	width : 60%;
+	height : 100%;
+	margin:50px 40px 0 40px;
+	border:2px solid #00bfff;
+	border-radius:40px;
+}
+
+
+#managerImg, #familyImg {
+	width : 20px;
+	height : 20px;
+}
+
+.profileInfo {
+	font-size : 20px;
+	margin : 10px;
+	width: 33.33333333%;
+	display:inline-table;
+	height:30px;
+	line-heignt:30px;
+}
+
+#profileInfo {
+	float: left;
+	position: relative;
+  	min-height: 1px;
+  	padding-right: 15px;
+	padding-left: 15px;
+	margin-right:20px;
+}
+
+.profileInfoDiv{
+	width:700px;;
+}
+
+.proflieContent {
+	width : 30%;
+	font-size:20px !important;
+	border : none;
+	height:30px !important;
+	line-height: 30px;
+	margin-left:20px;
+}
+
+#profileName {
+	font-size : 30px;	
+	height:50px;
+	width:200px;
+	margin:10px auto;
+}
+
+#profilePic {
+	margin-top:10px;
+	text-align : center;
+}
+
+#profileImg {
+	width:100px;
+	height:100px;
+	margin: 20px auto;
+	border : 1px solid #ff0000;
+}
+
+#homeName {
+	float : initial;
+	width : 100%;
+	height:60px;
+	border-bottom: 1px solid #00bfff;
+	text-align : center;
+}
+
+#homeNameLabel{
+	font-size : 40px;
+	font-weight : bold;
+	margin-top:30px;
+}
+
+
+input[readonly] {
+    	background-color: #ffffff ! important;
+	}
+	
+#backBtn {
+	width:50px;
+	height:200px;
+	float:right;
+	margin-top:140px;
+	background : url("../../img/myhome/Back.png");
+	background-size : cover;
+	border : none;
+}
+
+.buttons {
+	height : 50px;
+	width : 50px;
+	margin-top: 40px;	
+}
+
+.overBtns {
+	height : 50px;
+	width : 250px;
+	margin-top: 40px;	
+}
+
+#manager {
+	background : url("../../img/myhome/manager.png") no-repeat;
+	background-size : cover;
+	border : none;
+}
+
+#managerBtn{
+	background : url("../../img/myhome/manager2.png") no-repeat;
+	background-size : cover;
+	border : none;
+	display:none;
+}
+
+#delete {
+	background : url("../../img/myhome/delete.png") no-repeat;
+	background-size : cover;
+	border : none;
+}	
+
+#deleteBtn{
+	background : url("../../img/myhome/delete2.png") no-repeat;
+	background-size : cover;
+	border : none;
+	display:none;	
+}

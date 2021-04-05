@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res/com.example.finalproject"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:background="@drawable/login_gradation"
+	>
+	<!--  android:background="@drawable/login_gradation -->
+	<LinearLayout android:layout_width="fill_parent"
+		android:gravity="center_horizontal" android:id="@+id/header_layout"
+		android:orientation="vertical" android:layout_height="wrap_content">
+		<!-- 장쟁 추가 -->
+		
+		<org.taptwo.android.widget.TitleFlowIndicator
+			android:id="@+id/viewflowindic" android:layout_height="wrap_content"
+			android:layout_width="fill_parent"
+			android:background="#00B0F0"
+			app:footerLineHeight="2dp"
+			app:customTypeface="fonts/Antic.ttf"
+			app:footerTriangleHeight="10dp" 
+			app:textColor="#FFFFFF" 
+			app:selectedColor="#FFFFFF" 
+			app:footerColor="#C7FCFE" 
+			app:titlePadding="10dp" 
+			app:textSize="12dp" 
+			app:selectedSize="11dp"  
+			android:layout_marginTop="10dip" 
+			app:clipPadding="5dp">
+		 	
+		</org.taptwo.android.widget.TitleFlowIndicator>
+        <!-- selectedSize가 가운데 사이즈고 양쪽 사이즈가 testSize -->
+	</LinearLayout>
+	<org.taptwo.android.widget.ViewFlow
+		android:duplicateParentState="true" android:id="@+id/viewflow"
+		android:layout_width="fill_parent" android:layout_height="fill_parent"
+		>
+	    
+	</org.taptwo.android.widget.ViewFlow>
+	
+	
+
+	
+</LinearLayout> 

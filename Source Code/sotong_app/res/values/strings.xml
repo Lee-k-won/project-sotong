@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">FinalProject</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_menu">MenuActivity</string>
+    <string name="title_activity_main_menu">MainMenuActivity</string>
+    <string name="title_activity_post_box">PostBoxActivity</string>
+    <string name="title_activity_post_write">PostWriteActivity</string>
+    <string name="title_activity_detail_post">DetailPostActivity</string>
+    <string name="title_activity_story_write">StoryWriteActivity</string>
+    <string name="title_activity_story_modify">StoryModifyActivity</string>
+    <string name="title_activity_individual_detail_diary">IndividualDetailDiaryActivity</string>
+    <string name="title_activity_individual_diary_write">IndividualDiaryWriteActivity</string>
+    <string name="title_activity_individual_diary_modify">IndividualDiaryModifyActivity</string>
+    <string name="title_activity_family_detail_diary">FamilyDetailDiaryActivity</string>
+    <string name="title_activity_family_diary_detail_write">FamilyDiaryDetailWriteActivity</string>
+    <string name="title_activity_family_diary_detail_modify">FamilyDiaryDetailModifyActivity</string>
+    <string name="title_activity_individual_detail_profile">IndividualDetailProfileActivity</string>
+    <string name="title_activity_wish_list">WishListActivity</string>
+    <string name="title_activity_join">JoinActivity</string>
+    <string name="title_activity_">Activity</string>
+    <string name="title_activity_family_profile_info">FamilyProfileInfoActivity</string>
+    <string name="title_activity_my_profile_modify">MyProfileModifyActivity</string>
+    <string name="title_activity_add_wish">AddWishActivity</string>
+    <string name="title_activity_edit_wish">EditWishActivity</string>
+    <string name="title_activity_neighbor_home">NeighborHomeActivity</string>
+
+</resources>

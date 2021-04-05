@@ -1,0 +1,166 @@
+* {
+	margin:0;
+	padding:0;
+}
+
+/* 리스트 스크롤  */
+#family {
+	overflow:auto;
+	margin-top:20px;
+	height:550px;
+}
+
+/* 전체 틀을 배치 설정  */
+#family-diary-all {
+	width:1300px;
+	
+}
+
+/* 가족 이야기 보다의 body */
+#family-diary-body {
+	width:90%;
+	margin:0 auto;
+}
+
+/* 가족이야기의 전체 목록을 제공해주는 틀  */
+#family-diary-list {
+	width:190px;
+	height:780px;
+	float:left;
+	margin-top: 50px;
+	margin-right:20px;
+}
+
+/* 우리 가족일기 설정  */
+#family-diary-list-title {
+	text-align:center;
+	font-size:25px;
+	color:#00bfff;
+	font-weight:bold;
+	margin:10px;
+}
+
+#family-diary-list-info{
+	margin:0 auto;
+    margin: 20px auto 10px auto;
+}
+
+/* 등롣 날짜를 배치 및 설정 */
+#family-diary-list-title-btn {
+	border:none;
+	background-color:#ffffff;
+	width:100px;
+	padding-top:5px;
+	padding-bottom:5px;
+	font-weight:bold;
+	font-size:18px;
+	margin-bottom:20px;
+}
+
+/* ^버튼 위치 배치 설정 */
+#up-btn {
+	margin: 0 auto;
+}
+
+/* v버튼 위치 배치 설정 */
+#down-btn {
+	margin: 0 auto;
+}
+
+/* 목록 오른쪽에 나오는 전체 테두리 */
+#family-diary-board {
+	width:950px;
+	height:700px;
+	float:right;
+}
+
+/* 가족 이야기 게시물의 전체 테두리  */
+#family-diary-board-all {
+	margin-top:60px;
+	width:95%;
+	height:90%;
+	border-radius: 15px;
+	background-color:#DCEEE4;
+	margin:auto;
+	
+}
+
+/* 버튼 사이즈 설정 */
+.famil-diary-button {
+	width:47px;
+	height:47px;
+}
+
+
+
+/* 글쓰기 버튼 배치 및 설정 */
+.write {
+	width:47px;
+	height:47px;
+}
+
+/* 글씨 버튼 설정 */
+#add-photo-letter, #back-letter, #ok-letter {
+	display:none;
+}
+
+/* textarea 감싸는 테두리 */
+#family-diary-textarea {
+	width:95%;
+	height:580px;
+	margin:0 auto;
+	position:relative;
+	top: -50px;
+	
+}
+
+
+/* 수정 버튼 위치 배치민 설정 */
+#modify-btn {
+    float: left;
+    position: relative;
+    top: -20px;
+}
+
+
+/* textarea 설정 */
+#family-diary-board-textarea {
+	margin-top:20px;
+	padding:10px;
+	width:98%;
+	height:98%;
+	border-radius:15px;
+	resize:none;
+	overflow:auto;
+}
+
+/* 사진 버튼 테두리 위치 배치 및 설정 */
+#add-photo-button {
+	position: relative;
+    left: 20px;
+    float: left;
+}
+
+/* 돌아가기 버튼 테두리 위치 배치 및 설정 */
+#back-button {
+    float: right;
+    position: relative;
+}
+
+/* 확인 버튼 테두리 위치 배치 및 설정 */
+#ok-button {
+	float: right;
+    position: relative;
+}
+
+#ok-letter{
+	background:url("../../image/letter-ok.png") no-repeat;
+	background-size : cover;
+	border:none;
+}
+
+#ok-btn{
+	background:url("../../image/image/image-okBtn.png") no-repeat;
+	background-size : cover;
+	border:none;
+}

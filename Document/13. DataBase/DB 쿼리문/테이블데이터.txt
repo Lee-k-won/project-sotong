@@ -1,0 +1,175 @@
+
+
+
+
+- 홈 데이터
+
+insert into family_home_tb values ('h1', '경원이네');
+insert into family_home_tb values ('h2', '한별이네');
+insert into family_home_tb values ('h3', '철연이네');
+insert into family_home_tb values ('h4', '재영이네');
+insert into family_home_tb values ('h5', '태영이네');
+
+- 이웃 데이터
+
+insert into connected_neighbor_tb values ('cn1', 'h1' , 'h2');
+insert into connected_neighbor_tb values ('cn2', 'h1' , 'h3');
+insert into connected_neighbor_tb values ('cn3', 'h2' , 'h3');
+
+
+- 이웃 연결요청 데이터
+
+insert into connection_waiting_tb values ('cw1', 'h1' , 'h4', '15-08-01');
+insert into connection_waiting_tb values ('cw2', 'h1' , 'h5', '15-08-01');
+
+- 멤버 데이터
+
+insert into family_member_tb values ('m1', 'h1', '이경원', '010-9903-0582', 'kgy0101@naver.com', 'lee', '1234', 'img/profile/profile8.jpg', '경워니', '#ffffff', '91-01-23', '1');
+insert into family_member_tb values ('m4', 'h1', '김철연', '010-4141-9815', 'chealkim93@google.com', 'sdfe', '1234', 'img/profile/profile.jpg', '연철', '#ff2d3f', '99-11-12', '0');
+insert into family_member_tb values ('m2', 'h2', '장한별', '010-8419-5423', 'star@naver.com', 'star', 'aa34', 'img/profile/profile2.jpg', '별님', '#f2f2ff', '91-09-10', '1');
+insert into family_member_tb values ('m3', 'h3', '박세훈', '010-3541-2545', 'hun91@naver.com', 'Fe', '1234', 'img/profile/profile2.jpg', '후니', '#0f0f0f', '93-05-10', '1');
+insert into family_member_tb values ('m5', 'h3', '권기호', '010-8851-9748', 'gun00@naver.com', 'Fe22', '1234', null, '권총', null, null, '0');
+insert into family_member_tb values ('m6', 'h4', '장재영', '010-5234-4625', 'jy90@naver.com', 'jang', '1234', 'img/profile/brad.jpg', '영재', '#00bfff', '90-01-22', '1');
+insert into family_member_tb values ('m7', 'h5', '백태영', '010-6864-7784', 'yeong0@naver.com', 'back', '1234', null, '잠만보', '#ff2d3f', '92-02-23', '1');
+
+
+- 일정 데이터
+
+insert into schedule_tb values('s2', 'm2', '일정2', '일정장소2', '15-08-05 11:30', '15-08-07 01:20', '15-09-11 08:20', 1, '메모');
+insert into schedule_tb values('s1', 'm2', '일정1', '일정장소1', '15-07-05 12:30', '15-08-07 02:20', '15-09-15 09:20', 3, '메모');
+insert into schedule_tb values('s3', 'm2', '일정3', '일정장소3', '15-08-05 15:10', '15-08-11 04:20', '15-11-19 11:20', 2, '메모');
+insert into schedule_tb values('s4', 'm2', '일정4', '일정장소4', '15-08-05 18:20', '15-08-15 06:20', '15-10-20 12:20', 6, '메모');
+insert into schedule_tb values('s5', 'm2', '일정5', '일정장소5', '15-08-11 20:10', '15-08-20 07:25', '15-10-11 18:20', 7, '메모');
+
+
+- 알람
+
+insert into alarm_family_tb values('a1', 'm1', 's1');
+insert into alarm_family_tb values('a3', 'm2', 's3');
+insert into alarm_family_tb values('a2', 'm1', 's2');
+
+- 가족 일정
+
+insert into family_schedule_tb values('fs3', 'h1', 'm1','장소', '스케쥴1', '15-07-29', '15-08-02', '알람', 4, '메모');
+insert into family_schedule_tb (family_schedule_code,family_home_code,member_code,family_schedule_title,family_schedule_start_date,family_schedule_end_date) values('fs2', 'h2', 'm2', '스케쥴1', '15-07-28', '15-08-03');
+insert into family_schedule_tb (family_schedule_code,family_home_code,member_code,family_schedule_title,family_schedule_start_date,family_schedule_end_date, family_schedule_repeat, family_schedule_memo) values('fs1', 'h1', 'm1', '스케쥴1', '15-07-29', '15-08-02', 5, '메모');
+
+- 이벤트
+
+insert into family_event_tb values('e1', 'fs2', '요청이라능');
+insert into family_event_tb values('e2', 'fs3', '또 요청이라능');
+insert into family_event_tb values('e3', 'fs1', '계속 요청이라능');
+
+- 이벤트 응답
+
+insert into family_event_response_tb values('er1', 'm1', 'e1', '응답이라능');
+insert into family_event_response_tb values('er2', 'm1', 'e2', '응답2이라능');
+insert into family_event_response_tb values('er3', 'm2', 'e3', '응답3이라능');
+
+- 메뉴 정보
+
+insert into menu_tb values('menu1', '콩자반', '15-07-29');
+insert into menu_tb values('menu2', '김치찌개', '15-07-28');
+insert into menu_tb values('menu3', '된장찌개', '15-07-30');
+
+- 점심 정보
+
+insert into lunch_tb values('lunch1', 'm1', 'menu1', '물고기'); 
+insert into lunch_tb values('lunch2', 'm2', 'menu2', '동그랑땡');
+insert into lunch_tb values('lunch3', 'm4', 'menu3', '김치');
+insert into lunch_tb values('lunch4', 'm3', 'menu3', '피자');
+
+
+- 갤러리 카테고리
+
+insert into gallery_category_tb values('c1', '이야기');
+insert into gallery_category_tb values('c2', '일기');
+insert into gallery_category_tb values('c3', '편지');
+
+- 이미지 정보
+
+insert into image_tb values('i1', 'images/story/pic1', '15-07-29', 'c1');
+insert into image_tb values('i2', 'images/diary/pic2', '15-07-29', 'c2');
+insert into image_tb values('i3', 'images/letter/pic3', '15-07-28', 'c3');
+insert into image_tb values('i4', 'images/stroy/pic4', '15-07-30', 'c1');
+
+- 이모티콘 카테고리
+
+insert into emoticon_category_tb values('ec1', '안부');
+insert into emoticon_category_tb values('ec2', '슬픔');
+insert into emoticon_category_tb values('ec3', '축하');
+insert into emoticon_category_tb values('ec4', '사랑');
+
+- 이모티콘 정보
+
+insert into emoticon_tb values('em1', '하트', 'emoticon/love/emoticon1', 'ec4');
+insert into emoticon_tb values('em2', '힝', 'emoticon/sad/emoticon1', 'ec2');
+insert into emoticon_tb values('em3', '축하해', 'emoticon/celebration/emoticon1', 'ec3');
+
+- 소통 카테고리
+
+insert into sotong_category_tb values('sc1', '이야기');
+insert into sotong_category_tb values('sc2', '일기');
+insert into sotong_category_tb values('sc3', '편지');
+insert into sotong_category_tb values('sc4', '위시');
+
+- 소통 내용 (소통카테고리 컬럼 위치 조정필요)
+
+insert into sotong_contents_tb values('scontents1', 'h1','sc1', '소통내용이라능', 'i1', 'em1');
+insert into sotong_contents_tb values('scontents2', 'h2','sc2', '소통내용2이라능', 'i2', 'em2' );
+insert into sotong_contents_tb values('scontents3', 'h1', 'sc1', '소통내용3이라능', 'i3', 'em1');
+insert into sotong_contents_tb values('scontents4', 'h2', 'sc2','소통내용3이라능', 'i2', 'em2');
+insert into sotong_contents_tb values('scontents5', 'h1', 'sc4','위시용이라능', 'i3', 'em1');
+insert into sotong_contents_tb values('scontents6', 'h3', 'sc4','위시용이라능2', 'i2', 'em2');
+insert into sotong_contents_tb values('scontents7', 'h3', 'sc4','위시용이라능3', 'i1', 'em2');
+insert into sotong_contents_tb values('scontents8', 'h2', 'sc2','일기내용이라능', 'i1', 'em1');
+
+
+- 편지
+
+insert into letter_tb values('l1', 'scontents1', 'm1', 'm4', '편지제목이라능', '15-07-29');
+insert into letter_tb values('l2', 'scontents2', 'm4', 'm1', '편지라능', '15-07-28');
+insert into letter_tb values('l3', 'scontents3', 'm1', 'm4', '편지귀찮다능', '15-07-30');
+
+
+- 가족일기
+
+insert into family_diary_tb values('fdc1', 'h1', '15-07-22');
+insert into family_diary_tb values('fdc2', 'h1', '15-07-25');
+
+
+- 가족일기개인파트
+
+insert into family_diary_part_tb values('fdpc1','fdc1', 'm1','scontents2', '15-07-22 01:13');
+insert into family_diary_part_tb values('fdpc2','fdc2', 'm4','scontents4', '15-07-25 12:00');
+insert into family_diary_part_tb values('fdpc4','fdc2', 'm1','scontents7', '15-07-25 18:30');
+
+- 이야기
+
+insert into story_tb values('story1', 'm1', 'h1', 'scontents1', '15-07-22 01:13', 0, '15-07-22 01:13', '이웃');
+insert into story_tb values('story2', 'm2', 'h2', 'scontents3', '15-07-25 21:13', 0, '15-07-25 21:13', '가족');
+insert into story_tb values('story3', 'm4', 'h1', 'scontents3', '15-08-05 08:40', 0, '15-08-05 08:40', '가족');
+
+
+- 댓글정보
+
+insert into comment_tb values('comment1', 'm2', '댓글내용이라눙', '15-07-29', 'em1', 'fdc1', null);
+insert into comment_tb values('comment2', 'm2', '댓글내용2이라눙', '15-08-10', 'em2', null, 'story1');
+insert into comment_tb values('comment3', 'm4', '댓글내용3이라눙', '15-08-02', 'em3', null, 'story3');
+
+- 위시
+
+insert into wish_tb values('w1', 'scontents5', 'm3', '위시제목1', '15-07-22', '15-07-30', '완료');
+insert into wish_tb values('w2', 'scontents6', 'm2', '위시제목2', '15-07-15', '15-07-30', '진행중');
+insert into wish_tb values('w3', 'scontents7', 'm1', '위시제목3', '15-07-12', '15-07-20', '완료');
+
+- 개인일기
+
+insert into diary_tb values('d1', 'm2', 'scontents2', '일기제목', '15-07-29');
+insert into diary_tb values('d2', 'm1', 'scontents4', '일기제목', '15-07-29');
+insert into diary_tb values('d3', 'm2', 'scontents8', '일기제목', '15-07-29');
+
+
+commit;
+
+

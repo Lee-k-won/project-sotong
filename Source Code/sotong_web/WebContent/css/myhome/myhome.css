@@ -1,0 +1,210 @@
+.famInfo a{
+	color:Black;	/*간략프로필의 글씨 색*/
+}
+
+.famInfo a:hover {
+  	color: #00bfff !important;	/* 간략 프로필에 마우스 오버시 글씨 색*/
+  }
+
+#homeTitle {
+	height:100px;
+	text-align: center;
+	margin-top : 50px; 
+}
+
+#homeName{
+	height:50px;
+	float:left;
+	font-size : 50px;
+	font-weight : bold;
+}
+
+#editName{
+	background:url("../../img/myhome/edit.png") no-repeat;
+	background-size : cover;
+}
+  
+  #neighborBtn, #inviteBtn {
+   height : 50px;
+   width : 50px;  
+  }
+  
+  #neighborBtn {
+  	background:url("../../img/myhome/neighbor.png") no-repeat;
+  	background-size : cover;
+  }
+  
+  #neighborBtn2 {
+  	background:url("../../img/myhome/neighbor2.png") no-repeat;
+  	background-size : cover;
+  	display : none;
+  	height:80px;
+  }
+  
+  #inviteBtn {
+  	background:url("../../img/myhome/invite.png") no-repeat;
+  	background-size : cover;
+  }
+  
+  #inviteBtn2 {
+  	background:url("../../img/myhome/invite2.png") no-repeat;
+  	background-size : cover;
+  	display : none;
+  	height:80px;
+  }
+  
+  #neighbor{
+  	height:50px;
+  	float:left;
+  	width:20%;
+  }
+
+  #homeInfo{
+  	height:50px;
+ 	float :left;
+ 	width:60%; 
+ 	margin: 0 auto;
+ 	padding:0 210px;
+ 	border-bottom: 1px solid #00bfff;
+  }
+    
+  #invite {
+  	height:50px;
+  	float : left;
+  	width: 20%;
+  }
+   
+.btns{
+	width:50px;
+	height:50px;
+	border : none;
+}
+
+.overbtns{
+	width:250px;
+	height:50px;
+	border : none;
+}
+
+  #neighborBtn {
+  	float:left;
+  }
+  
+  #neighborBtn2 {
+  	float:left;
+  }
+  
+  #inviteBtn {
+  	float:right;
+  }
+  
+  #inviteBtn2 {
+  	float:right;
+  }
+  
+  
+  #familyList {
+	width : 1300px;
+	margin : 0 auto;
+	
+}
+  
+  .modal-header, h4, .close {
+      background-color: #0070C0;
+      color:white !important;
+      text-align: center;
+      font-size: 30px;
+  }
+  .modal-footer {
+      background-color: #f9f9f9;
+  }
+  
+
+  #editName, #deleteFamily {
+  float:left;
+  	width : 30px;
+  	height : 30px;
+  }
+  
+  #managerIcon, #familyIcon {
+  	width : 20px;
+  	height : 20px;
+  }
+  
+/* 가족프로필의 사진 크기 */
+  #profileImg {
+  	width : 130px;
+  	height : 130px;
+  	margin: 20px auto;
+  }
+  
+  
+  #textPart {
+  	text-align : center;
+  }
+  
+  #textPart mark {
+  	font-weight : bold;
+  	font-size : 20px;
+  }
+  
+  #changeName {
+  	height : 30px;
+  	size : 150px;
+  	border-radius : 10px;
+  	
+  }
+  
+  .buttons {
+  	width : 50px;
+  	height : 50px;
+  	border : none;
+  }  
+  
+  
+  #inviteOkBtn, #changeOkBtn {
+  	background:url("../../img/myhome/check.png") no-repeat;
+  	background-size : cover;
+  	
+  }
+  
+  #inviteCancelBtn, #changeCancelBtn {
+  	background:url("../../img/myhome/delete.png") no-repeat;
+  	background-size : cover;
+  }
+  
+
+#myButton {
+	text-align : center;
+}
+
+#profile_info{
+	font-size:25px;	
+	color:#00bfff;
+}
+#profile_info label{
+	font-size:25px;
+	margin-bottom:10px;
+}
+
+.form-inline{
+	width:90%;
+	border:2px solid #00bfff;
+	border-radius:40px;
+	margin-right:20px;
+	margin-left:20px;
+	margin-bottom:20px;
+}
+
+#familyList ul li {
+	color: #00B0F0;
+}
+
+#familyList ul li:hover {
+    display: block;
+    color: #ff6600;
+}
+
+.glyphicon.glyphicon-gift {
+    color: #FF66CC;
+}

@@ -1,0 +1,190 @@
+create table family_home_tb (
+family_home_code varchar2(30) not null primary key,
+family_home_name varchar2(20) not null	
+);
+
+create table connected_neighbor_tb(
+neighbor_code varchar2(30) primary key,
+home1_code varchar2(30) not null references family_home_tb(family_home_code),
+home2_code varchar2(30) not null references family_home_tb(family_home_code)
+);
+
+create table connection_waiting_tb (
+waiting_code varchar2(30) primary key,
+receiver_home_code varchar2(30) not null references family_home_tb(family_home_code),
+sender_home_code varchar2(30) not null references family_home_tb(family_home_code),
+waiting_date varchar2(50) not null 
+);
+
+
+create table family_member_tb (
+member_code varchar2(30) primary key,
+family_home_code varchar2(30) references family_home_tb(family_home_code),
+member_name varchar2(30) not null,
+member_phone varchar2(20) not null,
+member_email varchar2(60) not null,
+member_id varchar2(30) not null unique,
+member_pw varchar2(60) not null,
+member_photo varchar2(200) null,
+member_nickname varchar2(30) not null,
+member_color varchar2(10) null,
+member_birth varchar2(20) null,
+member_role varchar2(20) not null
+);
+
+create table schedule_tb (
+schedule_code varchar2(30) not null primary key,
+member_code varchar2(30) not null references family_member_tb(member_code),
+schedule_title varchar2(100) not null,
+schedule_place varchar2(100) null,
+schedule_start_date varchar2(50) not null,
+schedule_end_date varchar2(50) not null,
+schedule_alarm varchar2(30),
+schedule_repeat number(5),
+schedule_memo varchar2(500)
+);
+
+create table alarm_family_tb (
+alarm_family_code varchar2(30) primary key,
+member_code varchar2(30) not null references family_member_tb(member_code),
+schedule_code varchar2(30) not null references schedule_tb(schedule_code)
+);
+
+create table family_schedule_tb(
+family_schedule_code varchar2(30) primary key,
+family_home_code varchar2(30) not null references family_home_tb(family_home_code),
+member_code varchar2(30) not null references family_member_tb(member_code),
+family_schedule_title varchar2(100) not null,
+family_schedule_place varchar2(100),
+family_schedule_start_date varchar2(50) not null,
+family_schedule_end_date varchar2(50) not null,
+family_schedule_alarm varchar2(30),
+family_schedule_repeat number(5),
+family_schedule_memo varchar2(500)
+);
+
+create table family_event_tb (
+family_event_code varchar2(30) primary key,
+family_schedule_code varchar2(30) not null references family_schedule_tb(family_schedule_code),
+family_event_request varchar2(100) not null
+);
+
+create table family_event_response_tb (
+family_event_response_code varchar2(30) primary key,
+member_code varchar2(30) not null references family_member_tb(member_code),
+family_event_code varchar2(30) not null references family_event_tb(family_event_code),
+family_response_contents varchar2(300) not null
+);
+
+create table menu_tb (
+menu_code varchar2(30) primary key,
+dinner varchar2(200) not null,
+share_date varchar2(50) not null
+);
+
+create table lunch_tb(
+lunch_code varchar2(30) primary key,
+member_code varchar2(30) not null references family_member_tb(member_code),
+menu_code varchar2(30) not null references menu_tb(menu_code),
+lunch varchar2(200) not null
+);
+
+create table emoticon_category_tb(
+emoticon_category_code varchar2(30) primary key not null,
+emoticon_category varchar2(30) not null unique
+);
+
+create table emoticon_tb(
+emoticon_code varchar2(30) primary key not null,
+emoticon_name varchar2(20) not null unique,
+emoticon_route varchar2(200) not null,
+emoticon_category_code varchar2(30) not null references emoticon_category_tb(emoticon_category_code) 
+);
+
+create table gallery_category_tb(
+gallery_category_code varchar2(30) primary key not null,
+gallery_category varchar2(30) not null unique
+);
+
+create table image_tb(
+image_code varchar2(30) primary key not null,
+image_name varchar2(200) not null,
+image_written_date varchar2(50) not null,
+gallery_category_code varchar2(30) not null references gallery_category_tb(gallery_category_code)
+);
+
+create table sotong_category_tb(
+sotong_category_code varchar2(30) primary key,
+sotong_category varchar2(30) not null unique
+);
+
+create table sotong_contents_tb(
+sotong_contents_code varchar2(30) primary key,
+family_home_code varchar2(30) not null references family_home_tb(family_home_code),
+sotong_category_code varchar(30) not null references sotong_category_tb(sotong_category_code),
+contents varchar2(4000) not null,
+image_code varchar2(30) references image_tb(image_code),
+emoticon_code varchar2(30) references emoticon_tb(emoticon_code)
+);
+
+create table letter_tb(
+letter_code varchar2(30) primary key,
+sotong_contents_code varchar2(30) not null references sotong_contents_tb(sotong_contents_code),
+sender_code varchar2(30) not null references family_member_tb(member_code),
+receiver_code varchar2(30) not null references family_member_tb(member_code),
+letter_title varchar2(50) not null,
+send_date varchar2(50) not null
+);
+
+create table wish_tb(
+wish_code varchar2(30) primary key,
+sotong_contents_code varchar2(30) not null references sotong_contents_tb(sotong_contents_code),
+member_code varchar2(30) not null references family_member_tb(member_code),
+wish_title varchar2(100) not null,
+wish_date varchar2(50) not null,
+wish_end_date varchar2(50) not null,
+wish_finish varchar2(15) not null
+);
+
+create table story_tb(
+story_code varchar2(30) primary key,
+member_code varchar2(30) not null references family_member_tb(member_code),
+family_home_code varchar2(30) not null references family_home_tb(family_home_code),
+sotong_contents_code varchar2(30) not null references sotong_contents_tb(sotong_contents_code),
+story_date varchar2(50) not null,
+story_heart number(10),
+story_modify_date varchar2(50) not null,
+story_scope varchar2(15) not null
+);
+
+create table diary_tb (
+diary_code varchar2(30) primary key,
+member_code varchar2(30) not null references family_member_tb(member_code),
+sotong_contents_code varchar2(30) not null references sotong_contents_tb(sotong_contents_code),
+diary_title varchar2(100) not null,
+diary_date varchar2(50) not null
+);
+
+create table family_diary_tb (
+family_diary_code varchar2(30) primary key,
+family_home_code varchar2(30) not null references family_home_tb,
+family_diary_date varchar2(50) not null
+);
+
+create table family_diary_part_tb (
+family_diary_part_code varchar2(30) primary key,
+family_diary_code varchar2(30) references family_diary_tb(family_diary_code),
+member_code varchar2(30) not null references family_member_tb(member_code),
+sotong_contents_code varchar2(30) not null references sotong_contents_tb(sotong_contents_code),
+family_diary_part_date varchar2(50) not null
+);
+
+create table comment_tb(
+comment_code varchar2(30) primary key,
+member_code varchar2(30) not null references family_member_tb(member_code),
+comment_contents varchar2(300) not null,
+comment_date varchar2(50) not null,
+emoticon_code varchar2(30) not null references emoticon_tb(emoticon_code),
+family_diary_code varchar2(30) references family_diary_tb(family_diary_code),
+story_code varchar2(30) references story_tb(story_code)
+);

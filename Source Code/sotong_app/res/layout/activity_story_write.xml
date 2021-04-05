@@ -1,0 +1,118 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/storybackground"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#aaffffff"
+        >
+        <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="10dp"
+	        android:layout_marginRight="10dp"
+	        android:orientation="vertical"
+        	>
+        	<TextView
+        	    android:layout_width="match_parent"
+            	android:layout_height="wrap_content"
+            	android:text="우리가족 이야기 작성"
+            	android:textColor="#ffffff"
+            	android:textSize="25dp"
+            	android:layout_marginTop="10dp"
+           	 	android:layout_marginBottom="20dp"
+           	 	android:background="#7CD1E6"
+            	android:gravity="center"
+        	    />
+        </LinearLayout>
+        
+        <LinearLayout
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:layout_marginLeft="10dp"
+        	android:layout_marginRight="10dp"
+        	android:layout_marginBottom="10dp"
+        	android:background="@drawable/border"
+        	
+        	>
+        	<EditText
+        	    android:id="@+id/storyWriteContents"
+            	android:layout_width="match_parent"
+            	android:layout_height="wrap_content"
+            	android:layout_marginLeft="10dp"
+            	android:hint="오늘은 어떤 이야기가 있나요?"
+            	android:lines="12"
+            	android:maxLines="15"
+            	android:background="@null"
+            	/>
+        
+    	</LinearLayout>
+    	
+        <LinearLayout
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:orientation="horizontal"
+        	android:layout_marginLeft="20dp"
+        	android:layout_marginRight="20dp"
+        	android:layout_marginBottom="10dp"
+        	>
+        	<RadioGroup
+           		android:id="@+id/storyWriteOpenGroup"
+            	android:layout_width="match_parent"
+            	android:layout_height="wrap_content"
+            	android:checkedButton="@+id/radio1"
+            	android:orientation="horizontal"
+            	>
+            	<RadioButton
+                	android:id="@+id/radio1"
+                	android:layout_width="0dp"
+                	android:layout_weight="1"
+               		android:layout_height="wrap_content"
+                	android:text="가족공개"
+                	/>
+            	<RadioButton
+                	android:id="@+id/radio2"
+                	android:layout_width="0dp"
+                	android:layout_weight="1"
+                	android:layout_height="wrap_content"
+                	android:text="이웃공개"
+                	/>
+        	</RadioGroup>
+        
+    	</LinearLayout>
+    	
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="right"
+            >
+        	<ImageButton
+        	    android:id="@+id/storyWriteRegisterBtn"
+        	    android:layout_width="wrap_content"
+        	    android:layout_height="wrap_content"
+        	    android:src="@drawable/complete_btn"
+        	    
+        	    />
+        	<!-- 
+        	<ImageButton
+        	    android:id="@+id/storyWriteCancelBtn"
+        	    android:layout_width="wrap_content"
+        	    android:layout_height="wrap_content"
+        	    android:src="@drawable/cancel_btn"
+        	    />
+             -->
+        </LinearLayout>
+        
+    
+    </LinearLayout>
+    
+</LinearLayout>

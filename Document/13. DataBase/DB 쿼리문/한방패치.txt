@@ -1,0 +1,526 @@
+create table family_home_tb (
+family_home_code varchar2(30) not null primary key,
+family_home_name varchar2(20) not null	
+);
+
+create table connected_neighbor_tb(
+neighbor_code varchar2(30) primary key,
+home1_code varchar2(30) not null references family_home_tb(family_home_code),
+home2_code varchar2(30) not null references family_home_tb(family_home_code)
+);
+
+create table connection_waiting_tb (
+waiting_code varchar2(30) primary key,
+receiver_home_code varchar2(30) not null references family_home_tb(family_home_code),
+sender_home_code varchar2(30) not null references family_home_tb(family_home_code),
+waiting_date varchar2(50) not null 
+);
+
+
+create table family_member_tb (
+member_code varchar2(30) primary key,
+family_home_code varchar2(30) references family_home_tb(family_home_code),
+member_name varchar2(30) not null,
+member_phone varchar2(20) not null,
+member_email varchar2(60) not null,
+member_id varchar2(30) not null unique,
+member_pw varchar2(60) not null,
+member_photo varchar2(200) null,
+member_nickname varchar2(30) not null,
+member_color varchar2(10) null,
+member_birth varchar2(20) null,
+member_role varchar2(20) not null
+);
+
+create table schedule_tb (
+schedule_code varchar2(30) not null primary key,
+member_code varchar2(30) not null references family_member_tb(member_code),
+schedule_title varchar2(100) not null,
+schedule_place varchar2(100) null,
+schedule_start_date varchar2(50) not null,
+schedule_end_date varchar2(50) not null,
+schedule_alarm varchar2(30),
+schedule_repeat number(5),
+schedule_memo varchar2(500)
+);
+
+create table alarm_family_tb (
+alarm_family_code varchar2(30) primary key,
+member_code varchar2(30) not null references family_member_tb(member_code),
+schedule_code varchar2(30) not null references schedule_tb(schedule_code)
+);
+
+create table family_schedule_tb(
+family_schedule_code varchar2(30) primary key,
+family_home_code varchar2(30) not null references family_home_tb(family_home_code),
+member_code varchar2(30) not null references family_member_tb(member_code),
+family_schedule_title varchar2(100) not null,
+family_schedule_place varchar2(100),
+family_schedule_start_date varchar2(50) not null,
+family_schedule_end_date varchar2(50) not null,
+family_schedule_alarm varchar2(30),
+family_schedule_repeat number(5),
+family_schedule_memo varchar2(500)
+);
+
+create table family_event_tb (
+family_event_code varchar2(30) primary key,
+family_schedule_code varchar2(30) not null references family_schedule_tb(family_schedule_code),
+family_event_request varchar2(100) not null
+);
+
+create table family_event_response_tb (
+family_event_response_code varchar2(30) primary key,
+member_code varchar2(30) not null references family_member_tb(member_code),
+family_event_code varchar2(30) not null references family_event_tb(family_event_code),
+family_response_contents varchar2(300) not null
+);
+
+create table menu_tb (
+menu_code varchar2(30) primary key,
+dinner varchar2(200) not null,
+share_date varchar2(50) not null
+);
+
+create table lunch_tb(
+lunch_code varchar2(30) primary key,
+member_code varchar2(30) not null references family_member_tb(member_code),
+menu_code varchar2(30) not null references menu_tb(menu_code),
+lunch varchar2(200) not null
+);
+
+create table emoticon_category_tb(
+emoticon_category_code varchar2(30) primary key not null,
+emoticon_category varchar2(30) not null unique
+);
+
+create table emoticon_tb(
+emoticon_code varchar2(30) primary key not null,
+emoticon_name varchar2(20) not null unique,
+emoticon_route varchar2(200) not null,
+emoticon_category_code varchar2(30) not null references emoticon_category_tb(emoticon_category_code) 
+);
+
+create table gallery_category_tb(
+gallery_category_code varchar2(30) primary key not null,
+gallery_category varchar2(30) not null unique
+);
+
+create table image_tb(
+image_code varchar2(30) primary key not null,
+image_name varchar2(200) not null,
+image_written_date varchar2(50) not null,
+gallery_category_code varchar2(30) not null references gallery_category_tb(gallery_category_code)
+);
+
+create table sotong_category_tb(
+sotong_category_code varchar2(30) primary key,
+sotong_category varchar2(30) not null unique
+);
+
+create table sotong_contents_tb(
+sotong_contents_code varchar2(30) primary key,
+family_home_code varchar2(30) not null references family_home_tb(family_home_code),
+sotong_category_code varchar(30) not null references sotong_category_tb(sotong_category_code),
+contents varchar2(4000) not null,
+image_code varchar2(30) references image_tb(image_code),
+emoticon_code varchar2(30) references emoticon_tb(emoticon_code)
+);
+
+create table letter_tb(
+letter_code varchar2(30) primary key,
+sotong_contents_code varchar2(30) not null references sotong_contents_tb(sotong_contents_code),
+sender_code varchar2(30) not null references family_member_tb(member_code),
+receiver_code varchar2(30) not null references family_member_tb(member_code),
+letter_title varchar2(50) not null,
+send_date varchar2(50) not null
+);
+
+create table wish_tb(
+wish_code varchar2(30) primary key,
+sotong_contents_code varchar2(30) not null references sotong_contents_tb(sotong_contents_code),
+member_code varchar2(30) not null references family_member_tb(member_code),
+wish_title varchar2(100) not null,
+wish_date varchar2(50) not null,
+wish_end_date varchar2(50) not null,
+wish_finish varchar2(15) not null
+);
+
+create table story_tb(
+story_code varchar2(30) primary key,
+member_code varchar2(30) not null references family_member_tb(member_code),
+family_home_code varchar2(30) not null references family_home_tb(family_home_code),
+sotong_contents_code varchar2(30) not null references sotong_contents_tb(sotong_contents_code),
+story_date varchar2(50) not null,
+story_heart number(10),
+story_modify_date varchar2(50) not null,
+story_scope varchar2(15) not null
+);
+
+create table diary_tb (
+diary_code varchar2(30) primary key,
+member_code varchar2(30) not null references family_member_tb(member_code),
+sotong_contents_code varchar2(30) not null references sotong_contents_tb(sotong_contents_code),
+diary_title varchar2(100) not null,
+diary_date varchar2(50) not null
+);
+
+create table family_diary_tb (
+family_diary_code varchar2(30) primary key,
+family_home_code varchar2(30) not null references family_home_tb,
+family_diary_date varchar2(50) not null
+);
+
+create table family_diary_part_tb (
+family_diary_part_code varchar2(30) primary key,
+family_diary_code varchar2(30) references family_diary_tb(family_diary_code),
+member_code varchar2(30) not null references family_member_tb(member_code),
+sotong_contents_code varchar2(30) not null references sotong_contents_tb(sotong_contents_code),
+family_diary_part_date varchar2(50) not null
+);
+
+create table comment_tb(
+comment_code varchar2(30) primary key,
+member_code varchar2(30) not null references family_member_tb(member_code),
+comment_contents varchar2(300) not null,
+comment_date varchar2(50) not null,
+emoticon_code varchar2(30) not null references emoticon_tb(emoticon_code),
+family_diary_code varchar2(30) references family_diary_tb(family_diary_code),
+story_code varchar2(30) references story_tb(story_code)
+);
+
+CREATE OR REPLACE VIEW connection_waiting_view
+AS
+SELECT w.waiting_code, w.sender_home_code , sfh.family_home_name , sfm.member_name, w.receiver_home_code
+from connection_waiting_tb w
+join family_home_tb sfh
+on w.sender_home_code = sfh.family_home_code
+join family_member_tb sfm
+on sfh.family_home_code = sfm.family_home_code and sfm.member_role = '1';
+
+CREATE OR REPLACE VIEW connected_neighbor_view
+AS
+SELECT cn.neighbor_code, cn.home1_code "first_home_code", fh1.family_home_name "first_home_name", fm1.member_nickname "first_manager_name", cn.home2_code "second_home_code", fh2.family_home_name "second_home_name", fm2.member_nickname "second_manager_name"
+FROM connected_neighbor_tb cn
+join family_home_tb fh1
+on cn.home1_code = fh1.family_home_code
+join family_member_tb fm1
+on fh1.family_home_code = fm1.family_home_code and fm1.member_role = '1'
+join family_home_tb fh2
+on cn.home2_code = fh2.family_home_code
+join family_member_tb fm2
+on fh2.family_home_code = fm2.family_home_code and fm2.member_role = '1';
+
+CREATE OR REPLACE VIEW schedule_view
+AS
+SELECT s.schedule_code, m.family_home_code, m.member_code, m.member_nickname schedule_member, schedule_title, schedule_place, schedule_start_date, schedule_end_date, schedule_alarm, schedule_repeat, schedule_memo, am.member_nickname alarm_member
+FROM schedule_tb s , family_member_tb m, alarm_family_tb a, family_member_tb am
+WHERE s.member_code = m.member_code AND a.schedule_code(+) = s.schedule_code AND a.member_code = am.member_code(+);
+
+CREATE OR REPLACE VIEW family_schedule_view
+AS
+SELECT f.family_schedule_code, f.family_home_code, m.member_code, m.member_nickname, f.family_schedule_title, f.family_schedule_place, f.family_schedule_start_date, f.family_schedule_end_date, f.family_schedule_alarm, f.family_schedule_repeat, f.family_schedule_memo, e.family_event_request, rm.member_name, er.family_response_contents
+FROM family_schedule_tb f 
+left join family_event_tb e
+on f.family_schedule_code = e.family_schedule_code
+left join family_event_response_tb er
+on e.family_event_code = er.family_event_code
+left join family_member_tb rm
+on er.member_code = rm.member_code
+join family_member_tb m
+on f.member_code = m.member_code;
+
+
+CREATE OR REPLACE VIEW home_info_view
+AS
+SELECT h.family_home_code, h.family_home_name, m.member_code, m.member_name, m.member_phone, m.member_email, m.member_photo, m.member_nickname, m.member_color, m.member_birth, m.member_role
+from family_home_tb h
+left join family_member_tb m
+on h.family_home_code = m.family_home_code;
+
+
+CREATE OR REPLACE VIEW diary_view
+AS
+SELECT d.diary_code, m.member_nickname, d.diary_title, d.diary_date,s.sotong_contents_code, s.contents, i.image_name, i.image_written_date, e.emoticon_name, e.emoticon_route
+from diary_tb d
+join family_member_tb m
+on d.member_code = m.member_code
+join sotong_contents_tb s
+on d.sotong_contents_code = s.sotong_contents_code
+left join image_tb i
+on s.image_code = i.image_code
+left join emoticon_tb e
+on s.emoticon_code = e.emoticon_code;
+
+
+create or replace view family_diary_view
+as
+select fd.family_diary_code, fd.family_home_code, fd.family_diary_date , fdp.family_diary_part_code ,fm.member_nickname, fm.member_photo, fdp.family_diary_part_date,sc.sotong_contents_code, sc.contents, e.emoticon_name, e.emoticon_route, i.image_name, i.image_written_date
+from family_diary_tb fd
+left join family_diary_part_tb fdp
+on fd.family_diary_code = fdp.family_diary_code
+left join family_member_tb fm
+on fdp.member_code = fm.member_code
+left join sotong_contents_tb sc
+on fdp.sotong_contents_code = sc.sotong_contents_code
+left join emoticon_tb e
+on sc.emoticon_code = e.emoticon_code
+left join image_tb i
+on sc.image_code = i.image_code
+order by family_diary_code;
+
+
+
+CREATE OR REPLACE VIEW letter_view
+AS
+SELECT l.letter_code, sm.member_nickname "sender", rm.member_nickname "receiver", l.letter_title, l.send_date,s.sotong_contents_code, s.contents, i.image_name, i.image_written_date, e.emoticon_name, e.emoticon_route
+from letter_tb l
+join family_member_tb sm
+on l.sender_code = sm.member_code
+join family_member_tb rm
+on l.receiver_code = rm.member_code
+join sotong_contents_tb s
+on l.sotong_contents_code = s.sotong_contents_code
+join image_tb i
+on s.image_code = i.image_code
+join emoticon_tb e
+on s.emoticon_code = e.emoticon_code
+order by send_date desc;
+
+
+CREATE OR REPLACE VIEW wish_view
+AS
+SELECT w.wish_code, m.member_nickname, m.family_home_code,s.sotong_contents_code,s.contents, e.emoticon_name, e.emoticon_route, i.image_name, 
+i.image_written_date, w.wish_title, w.wish_date, w.wish_end_date, w.wish_finish
+from wish_tb w
+join family_member_tb m
+on w.member_code = m.member_code
+join sotong_contents_tb s
+on w.sotong_contents_code = s.sotong_contents_code
+join emoticon_tb e
+on s.emoticon_code = e.emoticon_code
+join image_tb i
+on s.image_code = i.image_code
+order by wish_date desc;
+
+
+CREATE OR REPLACE VIEW story_view
+AS
+SELECT st.story_code, st.family_home_code, h.family_home_name, m.member_code, m.member_photo, m.member_color, m.member_nickname,sc.sotong_contents_code, sc.contents, i.image_name, i.image_written_date, e.emoticon_name, e.emoticon_route, st.story_date, st.story_heart, st.story_modify_date, st.story_scope
+from story_tb st
+join family_home_tb h
+on st.family_home_code = h.family_home_code
+join family_member_tb m
+on st.member_code = m.member_code
+join sotong_contents_tb sc
+on st.sotong_contents_code = sc.sotong_contents_code
+join image_tb i
+on sc.image_code = i.image_code
+join emoticon_tb e
+on sc.emoticon_code = e.emoticon_code
+order by story_modify_date desc;
+
+
+create or replace view menu_view
+as
+select m.menu_code, fh.family_home_code, share_date, fm.member_nickname, lunch,  dinner
+from lunch_tb l
+left join menu_tb m
+on l.menu_code = m.menu_code
+left join family_member_tb fm
+on l.member_code = fm.member_code
+right join family_home_tb fh
+on fm.family_home_code = fh.family_home_code
+order by fm.family_home_code;
+
+create or replace view comment_view
+as
+select c.comment_code, fm.member_nickname, fm.member_photo, fm.member_color, c.comment_contents, c.comment_date, 
+e.emoticon_name, e.emoticon_route, c.family_diary_code,c.story_code
+from comment_tb c
+left join emoticon_tb e
+on c.emoticon_code = e.emoticon_code
+join family_member_tb fm
+on c.member_code = fm.member_code
+left join family_diary_tb fd
+on c.family_diary_code = fd.family_diary_code;
+
+
+
+
+
+
+
+
+- 홈 데이터
+
+insert into family_home_tb values ('h1', '경원이네');
+insert into family_home_tb values ('h2', '한별이네');
+insert into family_home_tb values ('h3', '철연이네');
+insert into family_home_tb values ('h4', '재영이네');
+insert into family_home_tb values ('h5', '태영이네');
+
+- 이웃 데이터
+
+insert into connected_neighbor_tb values ('cn1', 'h1' , 'h2');
+insert into connected_neighbor_tb values ('cn2', 'h1' , 'h3');
+insert into connected_neighbor_tb values ('cn3', 'h2' , 'h3');
+
+
+- 이웃 연결요청 데이터
+
+insert into connection_waiting_tb values ('cw1', 'h1' , 'h4', '15-08-01');
+insert into connection_waiting_tb values ('cw2', 'h1' , 'h5', '15-08-01');
+
+- 멤버 데이터
+
+insert into family_member_tb values ('m1', 'h1', '이경원', '010-9903-0582', 'kgy0101@naver.com', 'lee', '1234', 'img/profile/profile8.jpg', '경워니', '#ffffff', '91-01-23', '1');
+insert into family_member_tb values ('m4', 'h1', '김철연', '010-4141-9815', 'chealkim93@google.com', 'sdfe', '1234', 'img/profile/profile.jpg', '연철', '#ff2d3f', '99-11-12', '0');
+insert into family_member_tb values ('m2', 'h2', '장한별', '010-8419-5423', 'star@naver.com', 'star', 'aa34', 'img/profile/profile2.jpg', '별님', '#f2f2ff', '91-09-10', '1');
+insert into family_member_tb values ('m3', 'h3', '박세훈', '010-3541-2545', 'hun91@naver.com', 'Fe', '1234', 'img/profile/profile2.jpg', '후니', '#0f0f0f', '93-05-10', '1');
+insert into family_member_tb values ('m5', 'h3', '권기호', '010-8851-9748', 'gun00@naver.com', 'Fe22', '1234', null, '권총', null, null, '0');
+insert into family_member_tb values ('m6', 'h4', '장재영', '010-5234-4625', 'jy90@naver.com', 'jang', '1234', 'img/profile/brad.jpg', '영재', '#00bfff', '90-01-22', '1');
+insert into family_member_tb values ('m7', 'h5', '백태영', '010-6864-7784', 'yeong0@naver.com', 'back', '1234', null, '잠만보', '#ff2d3f', '92-02-23', '1');
+
+
+- 일정 데이터
+
+insert into schedule_tb values('s2', 'm2', '일정2', '일정장소2', '15-08-05 11:30', '15-08-07 01:20', '15-09-11 08:20', 1, '메모');
+insert into schedule_tb values('s1', 'm2', '일정1', '일정장소1', '15-07-05 12:30', '15-08-07 02:20', '15-09-15 09:20', 3, '메모');
+insert into schedule_tb values('s3', 'm2', '일정3', '일정장소3', '15-08-05 15:10', '15-08-11 04:20', '15-11-19 11:20', 2, '메모');
+insert into schedule_tb values('s4', 'm2', '일정4', '일정장소4', '15-08-05 18:20', '15-08-15 06:20', '15-10-20 12:20', 6, '메모');
+insert into schedule_tb values('s5', 'm2', '일정5', '일정장소5', '15-08-11 20:10', '15-08-20 07:25', '15-10-11 18:20', 7, '메모');
+
+
+- 알람
+
+insert into alarm_family_tb values('a1', 'm1', 's1');
+insert into alarm_family_tb values('a3', 'm2', 's3');
+insert into alarm_family_tb values('a2', 'm1', 's2');
+
+- 가족 일정
+
+insert into family_schedule_tb values('fs3', 'h1', 'm1','장소', '스케쥴1', '15-07-29', '15-08-02', '알람', 4, '메모');
+insert into family_schedule_tb (family_schedule_code,family_home_code,member_code,family_schedule_title,family_schedule_start_date,family_schedule_end_date) values('fs2', 'h2', 'm2', '스케쥴1', '15-07-28', '15-08-03');
+insert into family_schedule_tb (family_schedule_code,family_home_code,member_code,family_schedule_title,family_schedule_start_date,family_schedule_end_date, family_schedule_repeat, family_schedule_memo) values('fs1', 'h1', 'm1', '스케쥴1', '15-07-29', '15-08-02', 5, '메모');
+
+- 이벤트
+
+insert into family_event_tb values('e1', 'fs2', '요청이라능');
+insert into family_event_tb values('e2', 'fs3', '또 요청이라능');
+insert into family_event_tb values('e3', 'fs1', '계속 요청이라능');
+
+- 이벤트 응답
+
+insert into family_event_response_tb values('er1', 'm1', 'e1', '응답이라능');
+insert into family_event_response_tb values('er2', 'm1', 'e2', '응답2이라능');
+insert into family_event_response_tb values('er3', 'm2', 'e3', '응답3이라능');
+
+- 메뉴 정보
+
+insert into menu_tb values('menu1', '콩자반', '15-07-29');
+insert into menu_tb values('menu2', '김치찌개', '15-07-28');
+insert into menu_tb values('menu3', '된장찌개', '15-07-30');
+
+- 점심 정보
+
+insert into lunch_tb values('lunch1', 'm1', 'menu1', '물고기'); 
+insert into lunch_tb values('lunch2', 'm2', 'menu2', '동그랑땡');
+insert into lunch_tb values('lunch3', 'm4', 'menu3', '김치');
+insert into lunch_tb values('lunch4', 'm3', 'menu3', '피자');
+
+
+- 갤러리 카테고리
+
+insert into gallery_category_tb values('c1', '이야기');
+insert into gallery_category_tb values('c2', '일기');
+insert into gallery_category_tb values('c3', '편지');
+
+- 이미지 정보
+
+insert into image_tb values('i1', 'images/story/pic1', '15-07-29', 'c1');
+insert into image_tb values('i2', 'images/diary/pic2', '15-07-29', 'c2');
+insert into image_tb values('i3', 'images/letter/pic3', '15-07-28', 'c3');
+insert into image_tb values('i4', 'images/stroy/pic4', '15-07-30', 'c1');
+
+- 이모티콘 카테고리
+
+insert into emoticon_category_tb values('ec1', '안부');
+insert into emoticon_category_tb values('ec2', '슬픔');
+insert into emoticon_category_tb values('ec3', '축하');
+insert into emoticon_category_tb values('ec4', '사랑');
+
+- 이모티콘 정보
+
+insert into emoticon_tb values('em1', '하트', 'emoticon/love/emoticon1', 'ec4');
+insert into emoticon_tb values('em2', '힝', 'emoticon/sad/emoticon1', 'ec2');
+insert into emoticon_tb values('em3', '축하해', 'emoticon/celebration/emoticon1', 'ec3');
+
+- 소통 카테고리
+
+insert into sotong_category_tb values('sc1', '이야기');
+insert into sotong_category_tb values('sc2', '일기');
+insert into sotong_category_tb values('sc3', '편지');
+insert into sotong_category_tb values('sc4', '위시');
+
+- 소통 내용 (소통카테고리 컬럼 위치 조정필요)
+
+insert into sotong_contents_tb values('scontents1', 'h1','sc1', '소통내용이라능', 'i1', 'em1');
+insert into sotong_contents_tb values('scontents2', 'h2','sc2', '소통내용2이라능', 'i2', 'em2' );
+insert into sotong_contents_tb values('scontents3', 'h1', 'sc1', '소통내용3이라능', 'i3', 'em1');
+insert into sotong_contents_tb values('scontents4', 'h2', 'sc2','소통내용3이라능', 'i2', 'em2');
+insert into sotong_contents_tb values('scontents5', 'h1', 'sc4','위시용이라능', 'i3', 'em1');
+insert into sotong_contents_tb values('scontents6', 'h3', 'sc4','위시용이라능2', 'i2', 'em2');
+insert into sotong_contents_tb values('scontents7', 'h3', 'sc4','위시용이라능3', 'i1', 'em2');
+insert into sotong_contents_tb values('scontents8', 'h2', 'sc2','일기내용이라능', 'i1', 'em1');
+
+
+- 편지
+
+insert into letter_tb values('l1', 'scontents1', 'm1', 'm4', '편지제목이라능', '15-07-29');
+insert into letter_tb values('l2', 'scontents2', 'm4', 'm1', '편지라능', '15-07-28');
+insert into letter_tb values('l3', 'scontents3', 'm1', 'm4', '편지귀찮다능', '15-07-30');
+
+
+- 가족일기
+
+insert into family_diary_tb values('fdc1', 'h1', '15-07-22');
+insert into family_diary_tb values('fdc2', 'h1', '15-07-25');
+
+
+- 가족일기개인파트
+
+insert into family_diary_part_tb values('fdpc1','fdc1', 'm1','scontents2', '15-07-22 01:13');
+insert into family_diary_part_tb values('fdpc2','fdc2', 'm4','scontents4', '15-07-25 12:00');
+insert into family_diary_part_tb values('fdpc4','fdc2', 'm1','scontents7', '15-07-25 18:30');
+
+- 이야기
+
+insert into story_tb values('story1', 'm1', 'h1', 'scontents1', '15-07-22 01:13', 0, '15-07-22 01:13', '이웃');
+insert into story_tb values('story2', 'm2', 'h2', 'scontents3', '15-07-25 21:13', 0, '15-07-25 21:13', '가족');
+insert into story_tb values('story3', 'm4', 'h1', 'scontents3', '15-08-05 08:40', 0, '15-08-05 08:40', '가족');
+
+
+- 댓글정보
+
+insert into comment_tb values('comment1', 'm2', '댓글내용이라눙', '15-07-29', 'em1', 'fdc1', null);
+insert into comment_tb values('comment2', 'm2', '댓글내용2이라눙', '15-08-10', 'em2', null, 'story1');
+insert into comment_tb values('comment3', 'm4', '댓글내용3이라눙', '15-08-02', 'em3', null, 'story3');
+
+- 위시
+
+insert into wish_tb values('w1', 'scontents5', 'm3', '위시제목1', '15-07-22', '15-07-30', '완료');
+insert into wish_tb values('w2', 'scontents6', 'm2', '위시제목2', '15-07-15', '15-07-30', '진행중');
+insert into wish_tb values('w3', 'scontents7', 'm1', '위시제목3', '15-07-12', '15-07-20', '완료');
+
+- 개인일기
+
+insert into diary_tb values('d1', 'm2', 'scontents2', '일기제목', '15-07-29');
+insert into diary_tb values('d2', 'm1', 'scontents4', '일기제목', '15-07-29');
+insert into diary_tb values('d3', 'm2', 'scontents8', '일기제목', '15-07-29');
+
+
+commit;
+
+
+

@@ -1,0 +1,24 @@
+DiaryDAO		DD01
+FamilyDiaryDAO		FD02
+FamilyDiaryPartDAO	FP03
+FamilyHomeDAO		FH04
+FamilyMemberDAO		FM05
+LetterDAO		LD06
+LunchDAO		LD07
+MenuDAO			MD08
+ConnectdNeighborDAO	CN09
+AlarmFamilyDAO		AF10
+FamilyEventDAO		FE11
+FamilyEventResponseDAO	FR12
+FamilyScheduleDAO	FS13
+ScheduleDAO		SD14
+CommentDAO		CD15
+EmoticonCategoryDAO	EC16
+EmoticonDAO		ED17
+GalleryCategoryDAO	GC18
+ImageDAO		ID19	// 경로와 관련된거 식별코드로 넣기로 했는데 일단 보류
+SotongCategoryDAO	SC20
+SotongContentsDAO	SC21
+StoryDAO		SD22
+WishDAO			WD23
+ConnectionWaitingDAO	CW24

@@ -1,0 +1,95 @@
+* {
+	maring:0;
+	padding:0;
+}
+
+#save-memory-body {
+	width:1300px;	
+	margin:0 auto;
+    margin-top: 40px;
+}
+
+/* 추억 쌓기 테두리 */
+#memory-date-label-border {
+	height: 30px;
+    margin-bottom: 50px;
+    margin-top: 55px;
+}
+
+/* 추억 쌓을 기간 라벨 */
+#memory-date-label-border label {
+	font-size:30px;
+}
+
+/* 추억 쌓을 설정하는 테두리 */
+#memory-date-border {
+    width: 40%;
+    height: 50px;
+    margin: 0 auto;
+}
+
+/* 시작 기간 위치 배치 및 설정 */
+#start-date, #end-date {
+	float: left;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    width: 175px;
+    margin-left: 13px;
+}
+
+/* 라벨 위치 배치 및 설정 */
+#memory-date-border label {
+	float:left;
+	font-size:20px;
+	margin-right:20px;
+	margin-top: 3px;
+    font-weight: bold;	
+}
+
+#memory-send-email-border {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+#memory-send-email-border label {
+	font-size:30px;
+}
+
+#memory-send-email-border {
+	width:50%;
+}
+
+#memory-send-email {
+    width: 85%;
+	height:30px;
+	border-radius:5px;
+	text-align:center;
+	font-size:25px;
+}
+
+#buttons {
+    width: 65%;
+    float: right;
+}
+
+#back-btn {
+	width:47px;
+	height:47px;
+	background: url('../../image/image-backBtn.png') no-repeat;
+	background-size: cover;
+	cursor: pointer;
+	color:white;
+	border:none;
+	
+}
+
+#check-btn {
+	width:47px;
+	height:47px;
+	background: url('../../image/image-okBtn.png') no-repeat;
+	background-size: cover;
+	cursor: pointer;
+	border:none;
+}

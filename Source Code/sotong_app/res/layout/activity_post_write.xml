@@ -1,0 +1,141 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/postbox_background"
+    tools:context="com.example.finalproject.PostWriteActivity" >
+
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#aaffffff"
+        >
+       
+    	<LinearLayout
+        	android:layout_width="match_parent"
+       		android:layout_height="wrap_content"
+        	android:orientation="horizontal"
+        	android:layout_marginTop="10dp"
+        	>
+        	<TextView
+        	    android:id="@+id/postWriteReceiverText"
+            	android:layout_width="0dp"
+            	android:layout_weight="2"
+            	android:layout_height="wrap_content"
+            	android:layout_marginLeft="20dp"
+            	android:text="받는 사람 : "
+            	android:textColor="#000000"
+            	android:textSize="17dp"
+            	/>
+        	<Button
+        	    android:id="@+id/postWriteReceiverBtn"
+            	android:layout_width="0dp"
+            	android:layout_weight="1"
+            	android:layout_height="wrap_content"
+            	android:layout_marginRight="20dp"
+            	android:text="우리가족"
+            	android:textColor="#ffffff"
+            	android:background="#ACD9FE"
+            	android:textSize="17dp"
+            	/>
+    	</LinearLayout>
+    
+    	<LinearLayout
+        	android:layout_width="match_parent"
+        	android:layout_height="wrap_content"
+        	android:orientation="horizontal"
+        	android:layout_marginTop="10dp"
+        	>
+        	<TextView
+        	    android:id="@+id/postWriteReservationTime"
+        	    android:layout_width="0dp"
+        	    android:layout_weight="3"
+        	    android:layout_height="wrap_content"
+        	    android:layout_marginLeft="20dp"
+        	    android:text="예약 전송 여부"
+        	    android:textColor="#000000"
+        	    android:textSize="17dp"
+        	    />
+    	    
+        	<CheckBox
+        	    android:id="@+id/postWriteReservationCheck"
+        	    android:layout_width="0dp"
+        	    android:layout_weight="1"
+        	    android:layout_height="wrap_content"
+        	    android:text="체크"
+        	    android:textColor="#000000"
+        	    android:textSize="17dp"
+        	    />
+        
+    	</LinearLayout>
+    	
+    	<LinearLayout
+    	    android:layout_width="match_parent"
+       		android:layout_height="wrap_content"
+        	android:orientation="horizontal"
+    	    android:layout_marginTop="10dp"
+    	    >
+    	    <TextView
+            	android:layout_width="0dp"
+            	android:layout_weight="1"
+            	android:layout_height="wrap_content"
+            	android:layout_marginLeft="20dp"
+            	android:text="제목 : "
+            	android:textColor="#000000"
+            	android:textSize="17dp"
+            	/>
+    	    <EditText
+    	        android:id="@+id/postWriteTitleInputText"
+    	        android:layout_width="0dp"
+    	        android:layout_weight="4"
+    	        android:layout_height="wrap_content"
+    	        android:layout_marginRight="20dp"
+    	        android:hint="제목을 입력해주세요"
+    	        />
+    	</LinearLayout>
+    	
+    	<LinearLayout
+    	    android:layout_width="match_parent"
+    	    android:layout_height="wrap_content"
+    	    android:orientation="vertical"
+    	    android:background="#aaFBFDCE"
+    	    android:layout_marginLeft="20dp"
+    	    android:layout_marginRight="20dp"
+    	    >
+    	    <EditText
+    	    android:id="@+id/postWriteContentText"
+	    	android:layout_width="match_parent"
+	    	android:layout_height="wrap_content"
+	    	
+	    	android:lines="15"
+	    	android:maxLines="30"
+	    	android:singleLine="false"
+	    	android:hint="내용을 입력해주세요"
+	    		/>
+    	    
+    	</LinearLayout>
+    	
+    	<LinearLayout
+    	    android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:layout_marginLeft="20dp"
+			android:layout_marginRight="20dp"
+    	    >
+    	    <Button
+    	        android:id="@+id/postWriteSendBtn"
+    	        android:layout_width="match_parent"
+    	        android:layout_height="wrap_content"
+    	        android:text="편지 보내기"
+    	        android:textSize="20dp"
+    	        android:textColor="#ffffff"
+    	        android:background="#ACD9FE"
+    	        />
+    	</LinearLayout>
+    
+    </LinearLayout>
+    
+</LinearLayout>

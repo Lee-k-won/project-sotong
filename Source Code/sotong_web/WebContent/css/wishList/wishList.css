@@ -1,0 +1,301 @@
+* {
+	margin:0;
+	padding:0;
+}
+
+
+#wish {
+	overflow:auto;
+	margin-top:20px;
+	height:550px;
+}
+
+
+/* 전체 틀을 배치 설정  */
+#wish-list-all {
+	width:1300px;
+	margin:0 auto;
+	margin-top:40px;
+}
+
+/* 소망 상자 등록하다의 body */
+#wish-list-body {
+	width:90%;
+	margin:auto;
+}
+
+/*게시물 전체 틀 */
+#wish-list-board-info {
+    height: 100%;
+}
+
+/* form 위치 배치 및 설정 */
+#wish-list-form {
+	height: 100%;	
+}
+
+#wish-list-board-content {
+    height: 100%;
+}
+
+/* 소망 상자 등록하다의 전체 목록을 제공해주는 틀  */
+#wish-list-list {
+	width:190px;
+	height:780px;
+	float:left;
+	margin-right:20px;
+   	position: fixed;
+}
+
+/* 소망 상자 등록하다 설정  */
+#wish-list-list-title {
+    text-align: center;
+    font-size: 25px;
+    color: #00bfff;
+    font-weight: bold;
+    position: relative;
+    top: 15px;
+    left: 30px;
+}
+
+/* 소망상자 목록 배치 */
+#wish-list-list-info {
+    margin: 40px auto 10px auto;
+}
+
+/* 등롣 날짜를 배치 및 설정 */
+.wish-list-title-btn {
+	border: none;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #ffffff;
+}
+
+/* ^버튼 위치 배치 설정 */
+#up-btn {
+    margin-left: 15px;
+}
+
+/* 날짜  텍스트 테두리를 지우는 코드 */
+#wish-list-date {
+	margin: 0;
+	border: none;
+    font-weight: bold;
+}
+
+/* v버튼 위치 배치 설정 */
+#down-btn {
+	margin: 0 auto;
+}
+
+/* 글쓰기 버튼 틀 위치 배치 및 설정 */
+#write-btn-border {
+    width: 47px;
+    height: 47px;
+    float: right;
+    position: relative;
+    left: 55px;
+    top: 6px;
+}
+
+/* 목록 오른쪽에 나오는 전체 테두리 */
+.wish-list-board-border {
+	margin-top:0px;
+	width:950px;
+	float:right;
+	margin-bottom: 30px;
+	
+}
+
+/* 한 게시물의 테두리 */
+.wish-list-board {
+	width:97%;
+	margin-top:15px;
+	margin-left:12px;
+	margin-right:12px;
+	border-radius:10px;
+	background-color:#DCEEF4;
+	
+}
+
+#finish-wish-list-board {
+	rgb(154, 245, 177);
+}
+
+/* 작성자, 작성 날짜 테두리 위치 배치 및 설정 */
+.wish-list-write-text-border {
+	width: 36%;
+    height: 30px;
+    border-radius: 5px;
+    margin: 10px;
+    float: right;
+    background-color: #00bfff;
+}
+
+/* 작성자, 작성 날짜 위치 배치 */
+#wish-list-write-text {
+	width:91%;
+	margin: 0 auto;
+}
+
+/* 작성자, 작성 날짜 text 설정 */
+.write-text {
+	border:none;
+	background-color:#00bfff;
+	font-size:15px;
+	font-weight:bold;
+	border-radius:5px;
+}
+
+/* 작성자 글씨 색 변경 */
+#write-text-name-span, #finish-write-text-name-span {
+	color:yellow;
+}
+
+/* 작성자 명 설정 */
+#write-text-name, #finish-write-text-name {
+	width:17%;
+	color:yellow;
+}
+
+/* 작성 날짜 색 변경 */
+#write-text-date-span, #finish-write-text-date-span, #finish-write-text-date {
+	color:#ffffff;
+}
+
+/* 작성날짜 설정 */
+#write-text-date {
+	color:#ffffff;
+	width:28%;
+}
+
+/* 소망 상자의 제목 테두리 위치 배치 및 설정 */
+#wish-list-title-text-border {
+	width: 80%;
+	margin:0 auto;
+}
+
+/* 소망 상자의 제목 설정 */
+#wish-list-title-text {
+	width:100%;
+	height:23px;
+	border-radius:5px;
+}
+
+/* 소망 상자의 내용 테두리 위치 배치 및 설정 */
+#wish-list-content-text-border {
+	width:95%;
+	height:70%;
+	margin:0 auto;
+    margin-bottom: 15px;
+}
+
+/* 소망 상자의 내용 설정 */
+#wish-list-content-text {
+	width: 97%;
+    height: 400px;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+/* 버튼 테두리 위치 배치 및 설정 */
+#wish-list-button-border {
+    width: 20%;
+    float: right;
+    position: relative;
+    top: -40px;
+    right: 8px;
+}
+
+/*버튼 수정, 삭제, 완료의 테두리 */
+.wish-list-button {
+	float:right;
+}
+
+/* 버튼 사이즈 조정 */
+.famil-list-button {
+	width:47px;
+	height:47px;
+}
+
+/* 글씨 버튼 숨기기 */
+#write-letter, #wish-list-finish-button-letter, #wish-list-modify-button-letter, 
+#wish-list-delete-button-letter {
+	display:none;
+}
+
+/* 일정 날짜 설정  */
+.schedule-date {
+	border:none;
+	color:#ffffff;
+	background-color:#00bfff;
+}
+
+/*일정 날짜, 완료날짜 설정 */
+.schedule-date-border {
+    width: 21%;
+    height: 30px;
+    border-radius: 5px;
+    position: relative;
+    top: -10px;
+    left: 25px;
+    background-color: #00bfff;
+}
+
+/* 일정 날짜 테두리 위치 배치 및 설정 */
+#wish-list-schedule-border {
+}
+
+/* 일정 날짜 설정 */
+#wish-list-schedule-date, #finish-wish-list-schedule-date {
+	width:43%;
+	font-size:15px;
+	color:#ffffff;
+}
+
+/* 완료 날짜 위치 배치 및 설정 */
+#finish-wish-list-finish-schedule-border {
+ 	top: -40px;
+    left: 230px;
+    float: left;
+    background-color:#00d250;
+}
+
+/* 완료 날짜 설정 */
+#wish-list-finish-schedule-date, #finish-wish-list-finish-schedule-date {
+	width:41%;
+	font-size:15px;
+	color:#fff;
+	background-color:#00d250;
+}
+
+#finish-wish-list-schedule-border, #finish-wish-list-finish-schedule,
+ #finish-wish-list-schedule-date, #finish-wish-list-schedule {
+	background-color:#00d250;
+}
+
+#finish-wish-list-write-text-border, #finish-write-text-name-span, #finish-write-text-name,
+ #finish-write-text-date-span, #finish-write-text-date, #finish-wish-list-finish-schedule-date {
+	background-color:#00d250;
+}
+
+input#finish-write-text-date {
+    width: 28%;
+}
+
+#finish-wish-list-board {
+    background-color: rgba(0, 210, 80, 0.48);
+}
+
+button a {
+	color:black;
+}
+
+#wish-list-summary button a {
+    display: block;
+}
+#wish-list-summary button a {
+    color: black;
+    text-decoration:none;
+}

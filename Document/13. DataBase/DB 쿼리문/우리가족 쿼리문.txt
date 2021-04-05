@@ -1,0 +1,9 @@
+
+
+insert into family_member_tb values ('FM05815885946', 'FH047158194322', '이석주', '010-7401-6489', 'lsj6489@naver.com' , 'lsj6489', '1111', 'img/profile/default.JPG', '경원이네 아빠', '#ff2d3f', '62-08-03', '0');
+
+insert into family_member_tb values ('FM0581589024', 'FH047158194322', '곽성순', '010-3717-9976', 'kwak4721@naver.com' , 'kwak4721', '1111', 'img/profile/default.JPG', '경원이네 엄마', '#ff2d3f', '68-12-28', '0');
+
+insert into family_member_tb values ('FM0581589047', 'FH047158194322', '이현지', '010-3806-7756', 'freedom7756@naver.com' , 'freedom7756', '1111', 'img/profile/default.JPG', '경원이 동생', '#ff2d3f', '93-08-04', '0');
+
+insert into family_member_tb values ('FM05715819430', 'FH047158194322', '이경원', '010-9903-0582', ' windgard@naver.com' , 'windgard', '1111', 'img/profile/default.JPG', '경워니', '#00bfff', '91-10-24', '1');
